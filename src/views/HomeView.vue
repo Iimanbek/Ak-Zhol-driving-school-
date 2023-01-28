@@ -10,5 +10,7 @@
 </template>
 
 <style lang="scss">
-
+main{
+  background: papayawhip;
+}
 </style>
