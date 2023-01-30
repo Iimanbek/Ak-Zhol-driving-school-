@@ -2,15 +2,16 @@
 </script>
 
 <template>
-  <main>
-    <div class="xhe">
-      <h1>home motherfuckers</h1>
+  <Layout>
+    <div class="main">
+      <h1>home</h1>
     </div>
-  </main>
+  </Layout>
 </template>
 
 <style lang="scss">
-main{
-  background: papayawhip;
+.main{
+  background: pink;
+  height: 100vh ;
 }
 </style>
