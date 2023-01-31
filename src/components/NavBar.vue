@@ -45,6 +45,7 @@ nav {
     justify-content: center;
     border-bottom: 3px solid #032660;
     position: fixed;
+    background-color: #fff;
 
     .navMainConteiner {
         width: 90%;
