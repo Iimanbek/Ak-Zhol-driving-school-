@@ -117,6 +117,10 @@ nav {
                 font-weight: bold;
             }
 
+
+        }
+        .svich{
+            padding-left: 120px;
         }
     }
 }
