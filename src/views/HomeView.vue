@@ -2,7 +2,7 @@
 // import Slider from "../components/Slider.vue";
 export default {
     components: {
-        Slider,
+        // Slider,
     },
 };
 </script>
