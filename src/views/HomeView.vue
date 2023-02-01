@@ -10,9 +10,11 @@ export default {
 <template>
     <Layout>
         <div class="main">
-            <h1>home</h1>
             <div class="container">
                 <!-- <Slider /> -->
+                <router-link to="/testing">
+                    <v-btn>hello</v-btn>
+                </router-link>
             </div>
         </div>
     </Layout>
