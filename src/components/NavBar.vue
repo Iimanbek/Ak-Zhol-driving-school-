@@ -16,19 +16,24 @@
                     <v-switch v-model="model" hide-details inset></v-switch>
                 </div>
                 <div class="navButton">
-                    <button class="button">Пройти тестирование</button>
+                    <Button-v/>
                 </div>
             </div>
         </nav>
     </div>
 </template>
 <script>
+
+import NavButton from '@/components/navComponents/NavButton.vue'
 export default {
     data () {
       return {
         model: false,
       }
     },
+    components: {
+        'Button-v': NavButton
+    }
 }
 </script>
 <style lang="scss" scoped>
@@ -82,7 +87,6 @@ nav {
             }
 
         }
-
         h2 {
             font-family: 'Comfortaa', cursive;
             font-style: normal;
@@ -90,34 +94,6 @@ nav {
             font-size: 36px;
             line-height: 40px;
             color: #032660;
-        }
-
-        .button {
-            display: flex;
-            flex-direction: row;
-            justify-content: center;
-            align-items: center;
-            padding: 20px;
-            gap: 10px;
-            background: #032660;
-            border: 3px solid #032660;
-            border-radius: 8px;
-            font-family: 'Raleway', sans-serif;
-            font-style: normal;
-            font-weight: 500;
-            font-size: 18px;
-            line-height: 21px;
-            color: #fff;
-            transition-duration: 300ms;
-
-
-            &:hover {
-                background: #fff;
-                color: #032660;
-                font-weight: bold;
-            }
-
-
         }
         .svich{
             padding-left: 120px;
