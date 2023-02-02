@@ -50,7 +50,7 @@
                     <div class="mainButton">
                         <NavButton>Записаться</NavButton>
                     </div>
-                </div>
+                </div> 
             </div>
             <div class="imgWrapper">
                 <img src="@/mainPageImage/mainPageImage.jpg">
