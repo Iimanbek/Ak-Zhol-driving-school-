@@ -16,7 +16,9 @@
                     <v-switch v-model="model" hide-details inset></v-switch>
                 </div>
                 <div class="navButton">
-                    <Button-v/>
+                   <Button-v>
+                    Пройти тестирование
+                   </Button-v>
                 </div>
             </div>
         </nav>
