@@ -1,27 +1,44 @@
 <template >
-    <div>
-        <nav>
+    <div class="mainwrapper">
+        <header>
+            <nav>
             <div class="navMainConteiner">
                 <div class="navLogoWrapper">
                     <h2> Жакшы Жол</h2>
                 </div>
                 <div class="navLinks">
-                    <router-link to="#">Обо мне</router-link>
+                    <router-link to="#" class="aboutMe">Обо мне</router-link>
                     <router-link to="#">Методичка</router-link>
                     <router-link to="#">Видеоуроки</router-link>
                     <router-link to="#">Отзывы</router-link>
                     <router-link to="#">Контакты</router-link>
                 </div>
+                <div class="svich">
+                    <v-switch v-model="model" hide-details inset></v-switch>
+                </div>
                 <div class="navButton">
-                    <button class="button">Пройти тестирование</button>
+                   <Button-v>
+                    Пройти тестирование
+                   </Button-v>
                 </div>
             </div>
         </nav>
+        </header>
+       
     </div>
 </template>
 <script>
-export default {
 
+import NavButton from '@/components/navComponents/NavButton.vue'
+export default {
+    data () {
+      return {
+        model: false,
+      }
+    },
+    components: {
+        'Button-v': NavButton
+    }
 }
 </script>
 <style lang="scss" scoped>
@@ -30,16 +47,27 @@ export default {
     margin: 0px;
     color: black;
     text-decoration: none;
+    background-color: #D9D9D9
+}
+
+.mainwrapper{
+   height: 90px;
+   position: relative;
+   z-index: 1;
 }
 
 nav {
     width: 100%;
     display: flex;
     justify-content: center;
+    border-bottom: 3px solid #032660;
+    position: fixed;
+
+    
 
     .navMainConteiner {
         width: 90%;
-        height: 100px;
+        height: 90px;
         display: flex;
         align-items: center;
         justify-content: space-between;
@@ -49,44 +77,39 @@ nav {
             display: flex;
             justify-content: space-between;
 
+            .aboutMe {
+                font-size: 18px;
+                font-weight: bolder;
+                color: #032660;
+                line-height: 21px;
+            }
+
             a {
                 font-family: 'Raleway', sans-serif;
                 font-style: normal;
                 font-weight: 400;
-                font-size: 18px;
+                font-size: 16px;
                 line-height: 21px;
                 color: #000000;
+                transition-duration: 400ms;
+
+                &:hover {
+                    color: #032660;
+                    font-weight: 900;
+                }
             }
 
         }
-
         h2 {
             font-family: 'Comfortaa', cursive;
             font-style: normal;
             font-weight: 700;
             font-size: 36px;
             line-height: 40px;
-            color: #000000;
+            color: #032660;
         }
-
-        .button {
-            box-sizing: border-box;
-            display: flex;
-            flex-direction: row;
-            justify-content: center;
-            align-items: center;
-            padding: 20px;
-            gap: 10px;
-            background: #032660;
-            border: 3px solid #032660;
-            border-radius: 8px;
-
-            font-family: 'Raleway', sans-serif;
-            font-style: normal;
-            font-weight: 500;
-            font-size: 18px;
-            line-height: 21px;
-            color: #FFFFFF;
+        .svich{
+            padding-left: 120px;
         }
     }
 }

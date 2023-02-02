@@ -1,28 +1,23 @@
 <script>
-// import Slider from "../components/Slider.vue";
+import MainPage from '../components/MainPage.vue';
 export default {
-    components: {
-        // Slider,
-    },
-};
+  components : {
+    MainPage
+  }
+}
 </script>
 
 <template>
-    <Layout>
-        <div class="main">
-            <div class="container">
-                <!-- <Slider /> -->
-                <router-link to="/testing">
-                    <v-btn>hello</v-btn>
-                </router-link>
-            </div>
-        </div>
-    </Layout>
+  <Layout>
+    <div class="main">
+      <h1>home</h1>
+    </div>
+  </Layout>
 </template>
 
 <style lang="scss">
-.main {
-    background: pink;
-    min-height: 100vh;
+.main{
+  background: pink;
+  height: 100vh ;
 }
 </style>
