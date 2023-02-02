@@ -1,6 +1,7 @@
 <template >
-    <div>
-        <nav>
+    <div class="mainwrapper">
+        <header>
+            <nav>
             <div class="navMainConteiner">
                 <div class="navLogoWrapper">
                     <h2> Жакшы Жол</h2>
@@ -22,6 +23,8 @@
                 </div>
             </div>
         </nav>
+        </header>
+       
     </div>
 </template>
 <script>
@@ -44,6 +47,13 @@ export default {
     margin: 0px;
     color: black;
     text-decoration: none;
+    background-color: #D9D9D9
+}
+
+.mainwrapper{
+   height: 90px;
+   position: relative;
+   z-index: 1;
 }
 
 nav {
@@ -52,11 +62,12 @@ nav {
     justify-content: center;
     border-bottom: 3px solid #032660;
     position: fixed;
-    background-color: #fff;
+
+    
 
     .navMainConteiner {
         width: 90%;
-        height: 100px;
+        height: 90px;
         display: flex;
         align-items: center;
         justify-content: space-between;
