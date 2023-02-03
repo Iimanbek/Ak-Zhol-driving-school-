@@ -78,6 +78,7 @@ export default {
 
 .swiper {
     height: 405px;
+    margin-top: 100px;
 }
 
 .swiper-horizontal > .swiper-scrollbar,

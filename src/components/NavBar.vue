@@ -53,7 +53,7 @@ export default {
 .mainwrapper{
    height: 90px;
    position: relative;
-   z-index: 1;
+   z-index: 5;
 }
 
 nav {
@@ -62,9 +62,6 @@ nav {
     justify-content: center;
     border-bottom: 3px solid #032660;
     position: fixed;
-
-    
-
     .navMainConteiner {
         width: 90%;
         height: 90px;

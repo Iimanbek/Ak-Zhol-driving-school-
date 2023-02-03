@@ -19,6 +19,8 @@ export default {
 }
 </script>
 
-<style>
-    
+<style lang="scss">
+    main{
+        margin-bottom: 1000px;
+    }
 </style>
