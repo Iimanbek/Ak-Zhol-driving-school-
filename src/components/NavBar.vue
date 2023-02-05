@@ -2,42 +2,43 @@
     <div class="mainwrapper">
         <header>
             <nav>
-            <div class="navMainConteiner">
-                <div class="navLogoWrapper">
-                    <h2> Жакшы Жол</h2>
+                <BurgerMeniu/>
+                <!-- <ContentPhoneNav/> -->
+                <div class="dwd"> 
+                    <div class="navMainConteiner">
+                       
+                        <NavLogo />
+                        <NavNavigation />
+                        <NavSwich />
+                        <div class="navButton">
+                            <Button-v>
+                                Пройти тестирование
+                            </Button-v>
+                        </div>
+                    </div>
                 </div>
-                <div class="navLinks">
-                    <router-link to="#" class="aboutMe">Обо мне</router-link>
-                    <router-link to="#">Методичка</router-link>
-                    <router-link to="#">Видеоуроки</router-link>
-                    <router-link to="#">Отзывы</router-link>
-                    <router-link to="#">Контакты</router-link>
-                </div>
-                <div class="svich">
-                    <v-switch v-model="model" hide-details inset></v-switch>
-                </div>
-                <div class="navButton">
-                   <Button-v>
-                    Пройти тестирование
-                   </Button-v>
-                </div>
-            </div>
-        </nav>
+
+            </nav>
         </header>
-       
+
+
     </div>
 </template>
 <script>
-
+// import ContentPhoneNav from './navComponents/NavbarPhone/ContentPhoneNav.vue';
+import NavNavigation from '@/components/navComponents/NavNavigations.vue'
 import NavButton from '@/components/navComponents/NavButton.vue'
+import NavLogo from './navComponents/NavLogo.vue';
+import NavSwich from './navComponents/NavSwich.vue';
+import BurgerMeniu from './navComponents/navBarPhone/BurgerMeniuComponents/BurgerMeniu.vue';
 export default {
-    data () {
-      return {
-        model: false,
-      }
-    },
     components: {
-        'Button-v': NavButton
+        'Button-v': NavButton,
+        NavLogo,
+        NavNavigation,
+        NavSwich,
+        BurgerMeniu,
+        // ContentPhoneNav
     }
 }
 </script>
@@ -50,20 +51,22 @@ export default {
     background-color: #D9D9D9
 }
 
-.mainwrapper{
-   height: 90px;
-   position: relative;
-   z-index: 1;
+.dwd {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.mainwrapper {
+    height: 90px;
+    position: relative;
+    z-index: 1;
 }
 
 nav {
     width: 100%;
-    display: flex;
-    justify-content: center;
     border-bottom: 3px solid #032660;
     position: fixed;
-
-    
 
     .navMainConteiner {
         width: 90%;
@@ -72,45 +75,21 @@ nav {
         align-items: center;
         justify-content: space-between;
 
-        .navLinks {
-            width: 40%;
-            display: flex;
-            justify-content: space-between;
+    }
 
-            .aboutMe {
-                font-size: 18px;
-                font-weight: bolder;
-                color: #032660;
-                line-height: 21px;
-            }
 
-            a {
-                font-family: 'Raleway', sans-serif;
-                font-style: normal;
-                font-weight: 400;
-                font-size: 16px;
-                line-height: 21px;
-                color: #000000;
-                transition-duration: 400ms;
-
-                &:hover {
-                    color: #032660;
-                    font-weight: 900;
-                }
-            }
-
-        }
-        h2 {
-            font-family: 'Comfortaa', cursive;
-            font-style: normal;
-            font-weight: 700;
-            font-size: 36px;
-            line-height: 40px;
-            color: #032660;
-        }
-        .svich{
-            padding-left: 120px;
-        }
+}
+@media screen and (max-width: 1000px) {
+    nav{
+        background-color: #032660;
+        height: 100px;
+        display: flex;
+        align-items: center;
+    }
+}
+@media screen and (max-width: 1000px) {
+    .dwd {
+        display: none;
     }
 }
 </style>
