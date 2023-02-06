@@ -1,20 +1,21 @@
 <template>
+    <div class="meniuDefult" :class="{ activeMeniu: this.openCloseStore.status }">
+        <div class="meniuWrapper">
+            <div class="closeWrapper" @click="closeMeniu" />
+            <div class="contentMeniu " :class="{ activeContentMeniu: this.openCloseStore.status === true }">
+                <div @click="closeMeniu">
+                    <CloseBurButton />
+                </div>
+                <div class="meniuConteiner">
 
-    <div class="meniuDefult" :class="{ activeMeniu: this.openCloseStore.status  }">
-        <div :class="{ closed: this.close === false }">
-            <div class="meniuWrapper">
-                <div class="contentMeniu" :class="{ activeContentMeniu: this.openCloseStore.status === true }">
-                    <div class="meniuConteiner">
-                        <button class="burgerLogo" @click="closeMeniu">
-                            <NavLogo />
-                        </button>
-                        <NavBurger />
-
-                    </div>
+                    <button class="burgerLogo" @click="closeMeniu">
+                        <NavLogo />
+                    </button>
+                    <NavBurger />
+                    <NavButton>Пройти тестирование</NavButton>
                 </div>
             </div>
         </div>
-
     </div>
 </template>
 <script>
@@ -22,11 +23,14 @@ import { mapStores } from 'pinia'
 import { useOpenCloseStore } from '@/store/closeOpenmeniu'
 import NavLogo from '../NavLogo.vue';
 import NavBurger from '../navBarPhone/BurgerMeniuComponents/NavigatonsBurger.vue';
+import NavButton from '@/components/navComponents/NavButton.vue'
+import CloseBurButton from './BurgerMeniuComponents/CloseBurButton.vue'
 export default {
     components: {
         NavLogo,
         NavBurger,
-
+        NavButton,
+        CloseBurButton
     },
     computed: {
         ...mapStores(useOpenCloseStore)
@@ -36,6 +40,7 @@ export default {
         closeMeniu() {
             this.openCloseStore.close()
         }
+
     }
 
 
@@ -44,34 +49,61 @@ export default {
 
 </script>
 <style lang="scss" scoped>
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+
+}
+
+.closeWrapper {
+    width: 100%;
+    height: 610px;
+    position: absolute;
+    top: 0;
+
+
+
+}
+
 .meniuDefult {
     display: none;
 }
 
-.closed {
-    display: none;
-}
+
 
 .activeMeniu {
     display: block;
     position: absolute;
     top: 0px;
+
 }
 
 .meniuWrapper {
     position: relative;
     background-color: rgba(0, 0, 0, 0.61);
     width: 1000px;
-    height: 100vh;
+    height: 610px;
+
+
+
+
 
     .contentMeniu {
-        width: 500px;
+        width: 400px;
         position: absolute;
         top: 0px;
-        left: -500px;
+        left: -400px;
         background-color: rgb(255, 255, 255);
         display: flex;
         justify-content: center;
+        border-radius: 10px;
+        -webkit-box-shadow: 4px 4px 8px 0px #032660;
+        -moz-box-shadow: 4px 4px 8px 0px #032660;
+        box-shadow: 4px 4px 8px 0px #032660;
+        border: 2px solid #033a94;
+
+
     }
 
     .activeContentMeniu {
@@ -84,7 +116,6 @@ export default {
             flex-direction: column;
             align-items: flex-start;
             padding: 50px 30px;
-            height: 400px;
 
             .burgerLogo {
                 margin-bottom: 50px;
@@ -92,5 +123,12 @@ export default {
             }
         }
     }
+}
+
+@media screen and (min-width: 1001px) {
+    .activeMeniu {
+        display: none;
+    }
+
 }
 </style>

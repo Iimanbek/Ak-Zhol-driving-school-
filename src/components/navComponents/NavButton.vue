@@ -25,9 +25,5 @@
          
         }
     }
-// @media screen and (max-width: 1020px) {
-//     button{
-//         margin-left: 15px;
-//     }
-// }
+
 </style>

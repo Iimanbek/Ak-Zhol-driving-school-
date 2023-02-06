@@ -3,7 +3,6 @@
         <header>
             <nav>
                 <BurgerMeniu/>
-                <!-- <ContentPhoneNav/> -->
                 <div class="dwd"> 
                     <div class="navMainConteiner">
                        
@@ -25,7 +24,6 @@
     </div>
 </template>
 <script>
-// import ContentPhoneNav from './navComponents/NavbarPhone/ContentPhoneNav.vue';
 import NavNavigation from '@/components/navComponents/NavNavigations.vue'
 import NavButton from '@/components/navComponents/NavButton.vue'
 import NavLogo from './navComponents/NavLogo.vue';
@@ -38,7 +36,6 @@ export default {
         NavNavigation,
         NavSwich,
         BurgerMeniu,
-        // ContentPhoneNav
     }
 }
 </script>
@@ -61,6 +58,7 @@ export default {
     height: 90px;
     position: relative;
     z-index: 1;
+    
 }
 
 nav {

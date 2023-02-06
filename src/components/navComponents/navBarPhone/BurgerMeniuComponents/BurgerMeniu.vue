@@ -34,8 +34,13 @@ button {
     display: none;
 
     span{
-       width:  70px;
+       width:  60px;
         border: 4px solid white;
+        border-radius: 20px;
+        transition: all 300ms;
+        &:hover{
+            border: 4px solid #0b5bdd73;
+        }
     }
 
 }
@@ -43,13 +48,15 @@ button {
 @media screen and (max-width: 1000px) {
     button {
         display: block;
-        width: 70px;
+        width: 60px;
         height: 90px;
         display: flex;
         flex-direction: column;
-        justify-content: space-around;
+        justify-content:space-evenly;
         background-color: #032660;
         margin-left: 10px;
+
+       
     }
 }
 </style>
