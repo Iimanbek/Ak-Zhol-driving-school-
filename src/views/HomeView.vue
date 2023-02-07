@@ -1,10 +1,12 @@
 <script>
 import MainPage from '../components/MainPage.vue';
 import sliderss from '../components/Slider.vue'
+import onLst from '../components/onLst.vue';
 export default {
   components : {
     MainPage,
-    sliderss
+    sliderss,
+    onLst
   }
 }
 </script>
@@ -14,12 +16,13 @@ export default {
     <div class="main">
       <MainPage/>
       <sliderss/>
+      <onLst/>
     </div>
   </Layout>
 </template>
 
 <style lang="scss">
 .main{
-  height: 100vh ;
+  // height: 200vh ;
 }
 </style>
