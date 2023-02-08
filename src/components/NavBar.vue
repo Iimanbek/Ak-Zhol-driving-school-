@@ -2,17 +2,14 @@
     <div class="mainwrapper">
         <header>
             <nav>
-                <BurgerMeniu/>
-                <div class="dwd"> 
+                <BurgerMeniu />
+                <div class="dwd">
                     <div class="navMainConteiner">
-                       
                         <NavLogo />
                         <NavNavigation />
-                        <NavSwich />
                         <div class="navButton">
-                            <Button-v>
-                                Пройти тестирование
-                            </Button-v>
+                            <language />
+                            <Button-v> Пройти тестирование </Button-v>
                         </div>
                     </div>
                 </div>
@@ -24,18 +21,19 @@
     </div>
 </template>
 <script>
-import NavNavigation from '@/components/navComponents/NavNavigations.vue'
-import NavButton from '@/components/navComponents/NavButton.vue'
+import NavNavigation from '@/components/navComponents/NavNavigations.vue';
+import NavButton from '@/components/navComponents/NavButton.vue';
 import NavLogo from './navComponents/NavLogo.vue';
-import NavSwich from './navComponents/NavSwich.vue';
 import BurgerMeniu from './navComponents/navBarPhone/BurgerMeniuComponents/BurgerMeniu.vue';
+import language from './navComponents/NavlanguageDown.vue';
+
 export default {
     components: {
         'Button-v': NavButton,
         NavLogo,
         NavNavigation,
-        NavSwich,
         BurgerMeniu,
+        language
     }
 }
 </script>
@@ -45,7 +43,6 @@ export default {
     margin: 0px;
     color: black;
     text-decoration: none;
-    background-color: #D9D9D9
 }
 
 .dwd {
@@ -57,13 +54,12 @@ export default {
 .mainwrapper {
     height: 90px;
     position: relative;
-    z-index: 1;
-    
+    z-index: 2;
+
 }
 
 nav {
     width: 100%;
-    border-bottom: 3px solid #032660;
     position: fixed;
 
     .navMainConteiner {
@@ -77,17 +73,36 @@ nav {
 
 
 }
+
 @media screen and (max-width: 1000px) {
-    nav{
-        background-color: #032660;
+    nav {
+        background-color: #408440;
         height: 100px;
         display: flex;
         align-items: center;
+    
     }
 }
+
 @media screen and (max-width: 1000px) {
     .dwd {
         display: none;
     }
 }
+@media screen and (max-width: 1108px) {
+    .navMainConteiner {
+      width: 100%;
+    }
+}
+
+@media screen and (max-width: 1095px) {
+    .navButton {
+    margin-left: 35px;
+    }
+}
+.navButton{
+    display: flex;
+    align-items: center;
+}
+
 </style>

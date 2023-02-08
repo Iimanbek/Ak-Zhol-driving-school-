@@ -39,7 +39,7 @@ button {
         border-radius: 20px;
         transition: all 300ms;
         &:hover{
-            border: 4px solid #0b5bdd73;
+            border: 4px solid #47dd0b73;
         }
     }
 
@@ -53,7 +53,7 @@ button {
         display: flex;
         flex-direction: column;
         justify-content:space-evenly;
-        background-color: #032660;
+        background: #408448;
         margin-left: 10px;
 
        

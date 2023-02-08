@@ -8,19 +8,24 @@
     button{
         width: 213px;
         height: 58.6px;
-        background-color:rgba(3, 38, 96, 1);
+        background: #408448;
         border-radius: 8px;
+        border: 1px solid #408448;
+
         color: white;
         font-family: 'Raleway',sans-serif;
+        font-style: normal;
+        font-weight: 700;
         font-size: 18px;
         line-height: 21px;
-        transition: 200ms;
-        transition-duration: 300ms;
-        border: 3px solid rgba(3, 38, 96, 1);
+        transition: all 200ms;
+      
+       
 
         &:hover{
-            color:rgba(3, 38, 96, 1); 
-            background-color: #fff;
+         
+            color:#408448; 
+          background-color: #ffff;
             font-weight: bold;
          
         }

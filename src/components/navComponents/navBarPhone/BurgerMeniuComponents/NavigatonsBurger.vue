@@ -18,15 +18,15 @@
 
     .aboutMe {
         font-size: 32px;
-        font-weight: bolder;
-        color: #032660;
+        font-weight: 800;
+        color: #408448;
         line-height: 21px;
     }
 
     a {
         font-family: 'Raleway', sans-serif;
         font-style: normal;
-       font-weight: bold;
+        font-weight: 700;
         font-size: 21px;
         line-height: 21px;
         color: #000000;
@@ -35,7 +35,7 @@
         margin-bottom: 50px;
 
         &:hover {
-            color: #032660;
+            color: #408448;
             font-weight: 900;
         }
     }

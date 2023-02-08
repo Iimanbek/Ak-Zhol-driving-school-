@@ -1,6 +1,6 @@
 <template>
 
-    <button class="dwddwdwwdwd">
+    <button class="buttonClose">
         <svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
             x="0px" y="0px" width="20px " height="20px" viewBox="0 0 306 306" style="enable-background:new 0 0 306 306;"
             xml:space="preserve">
@@ -18,11 +18,11 @@
     box-sizing: border-box;
     padding: 0;
     margin: 0;
-    color: #032660;
+    fill: #408448;
 }
 
 
-.dwddwdwwdwd {
+.buttonClose {
     rotate: 180deg;
     margin: 10px 10px;
     border-radius: 5px;
@@ -36,7 +36,7 @@
     left: 0;
 
     &:hover {
-        border: 4px solid #032660;
+        border: 4px solid  #408448;
 
     }
 }
