@@ -83,7 +83,8 @@ export default {
     position: relative;
     background-color: rgba(0, 0, 0, 0.61);
     width: 1000px;
-    height: 610px;
+    height: 100vh;
+
     .contentMeniu {
         width: 400px;
         position: absolute;
@@ -95,8 +96,8 @@ export default {
         border-radius: 10px;
         -webkit-box-shadow: 4px 4px 8px 0px #408448;
         -moz-box-shadow: 4px 4px 8px 0px #408448;
-        box-shadow: 4px 4px 8px 0px  #408448;
-        border: 2px solid  #408448;
+        box-shadow: 4px 4px 8px 0px #408448;
+        border: 2px solid #408448;
 
 
     }
