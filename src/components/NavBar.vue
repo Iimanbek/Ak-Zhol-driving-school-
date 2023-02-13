@@ -21,6 +21,7 @@
     </div>
 </template>
 <script>
+
 import NavNavigation from '@/components/navComponents/NavNavigations.vue';
 import NavButton from '@/components/navComponents/NavButton.vue';
 import NavLogo from './navComponents/NavLogo.vue';
