@@ -1,9 +1,6 @@
 <template>
     <div class="mainWraper">
         <div class="mainConteiner">
-            <div class="imgWrapper">
-
-            </div>
             <div class="contConeiner">
                 <div class="Header">
                     <h1>Почувствуй себя на дороге уверенно!</h1>
@@ -18,34 +15,28 @@
         </div>
     </div>
 </template>
-
-
 <script>
 import NavButton from './navComponents/NavButton.vue';
-
 export default {
     components: {
         NavButton
     }
 }
 </script>
-
 <style lang="scss" scoped>
 * {
     padding: 0px;
     margin: 0px;
     box-sizing: border-box;
 }
-
 .mainWraper {
     width: 100%;
     display: flex;
     justify-content: center;
+    margin: 10px  0 100px 0;
     height: 580px;
-
     .mainConteiner {
-        margin: 20px 0;
-        width: 90%;
+        width: 100%;
         background: url('../imagesHeader/bacraundMain.jpg');
         background-repeat: no-repeat;
         background-size: cover;
@@ -53,7 +44,7 @@ export default {
         display: flex;
         justify-content: center;
         align-items: center;
-
+        padding-bottom: 20px;    
         .contConeiner {
             width: 95%;
             height: 95%;
@@ -88,15 +79,18 @@ export default {
                     color: #FFFFFF;
                 }
             }
-
         }
 
     }
 }
-
-@media screen and (max-width: 422px) {
+@media screen and (max-width: 1000px) {
     .mainWraper{
-        height: 700px;
+        margin-top: 20px;
+    }
+}
+@media screen and (max-width: 1000px) {
+    .buttonWrapper{
+        margin-top: 20px;
     }
 }
 </style>
