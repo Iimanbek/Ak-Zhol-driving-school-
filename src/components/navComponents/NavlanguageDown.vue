@@ -95,9 +95,11 @@ export default {
     margin-right: 10px;
     border: 0.5px solid #000000;
     border-radius: 8px;
+    transition:all 300ms ;
 
     &:hover {
-      background-color: #00000017;
+      background: #408448;
+      border: 1px solid  #408448;
     }
   }
 }
@@ -108,7 +110,7 @@ export default {
   width: 200px;
   text-align: start;
   padding: 10px 10px;
-  background-color: #cccccc;
+  background: #848484;
   border-radius: 10px;
   margin-top: 3px;
   right: -20px;

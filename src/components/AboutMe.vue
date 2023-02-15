@@ -60,8 +60,8 @@
     box-sizing: border-box;
     padding: 0;
     margin: 0;
+   
 }
-
 img {
     width: 100%;
     height: 100%;
@@ -70,6 +70,7 @@ img {
 .headerAboutMe {
     width: 100%;
     padding-bottom: 50px;
+    
 
     h2 {
         color: #306358;
@@ -112,6 +113,7 @@ p {
         background: #D9D9D9;
         border-radius: 12px;
         padding: 7px 7px;
+        box-shadow: 2px 0px 2px 2px  rgba(0, 0, 0, 0.25); 
 
 
         .contConteiner {
@@ -178,7 +180,10 @@ p {
         justify-content: flex-start;
     }
 }
-
+.abouttmeWrapper{
+    z-index: 1;
+    position: relative;
+}
 </style>
 
      

@@ -1,4 +1,5 @@
 <template>
+    <backFigura/>
     <div class="mainWraper">
         <div class="mainConteiner">
             <div class="contConeiner">
@@ -17,9 +18,11 @@
 </template>
 <script>
 import NavButton from './navComponents/NavButton.vue';
+import backFigura from './MainPageComponents/BackFigura.vue';
 export default {
     components: {
-        NavButton
+        NavButton,
+        backFigura
     }
 }
 </script>
@@ -33,7 +36,8 @@ export default {
     width: 100%;
     display: flex;
     justify-content: center;
-    margin: 10px  0 100px 0;
+    margin: 0  0 100px 0;
+    padding-top: 30px;
     height: 580px;
     .mainConteiner {
         width: 100%;
@@ -44,7 +48,9 @@ export default {
         display: flex;
         justify-content: center;
         align-items: center;
-        padding-bottom: 20px;    
+        padding-bottom: 20px;  
+        z-index: 1; 
+        box-shadow: 2px 2px 20px 5px  rgba(0, 0, 0, 0.25); 
         .contConeiner {
             width: 95%;
             height: 95%;

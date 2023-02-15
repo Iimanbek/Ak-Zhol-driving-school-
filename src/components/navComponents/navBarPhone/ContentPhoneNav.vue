@@ -56,69 +56,22 @@ export default {
 
 }
 
-.closeWrapper {
+.meniuDefult {
     width: 100%;
-    height: 610px;
+    height: 100vh;
+    background-color: rgb(59, 48, 48);
+    display: none;
     position: absolute;
     top: 0;
-
-
+    left: -1000;
+    overflow: hidden;
 
 }
-
-.meniuDefult {
-    display: none;
-}
-
-
 
 .activeMeniu {
     display: block;
-    position: absolute;
-    top: 0px;
+    left: 0;
 
-}
-
-.meniuWrapper {
-    position: relative;
-    background-color: rgba(0, 0, 0, 0.61);
-    width: 1000px;
-    height: 100vh;
-
-    .contentMeniu {
-        width: 400px;
-        position: absolute;
-        top: 0px;
-        left: -400px;
-        background-color: rgb(255, 255, 255);
-        display: flex;
-        justify-content: center;
-        border-radius: 10px;
-        -webkit-box-shadow: 4px 4px 8px 0px #408448;
-        -moz-box-shadow: 4px 4px 8px 0px #408448;
-        box-shadow: 4px 4px 8px 0px #408448;
-        border: 2px solid #408448;
-
-
-    }
-
-    .activeContentMeniu {
-        position: absolute;
-        left: 0;
-
-        .meniuConteiner {
-            width: 90%;
-            display: flex;
-            flex-direction: column;
-            align-items: flex-start;
-            padding: 50px 30px;
-
-            .burgerLogo {
-                margin-bottom: 50px;
-                cursor: pointer;
-            }
-        }
-    }
 }
 
 @media screen and (min-width: 1001px) {

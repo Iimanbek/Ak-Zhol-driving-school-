@@ -12,15 +12,18 @@ export default {
 </script>
 
 <template>
-  <Layout>
+  <div class="back_color">
+    <Layout>
     <div class="main">
       <div class="container">
-        <MainPage />
-        <AboutMe/>
+          <MainPage />
+          <AboutMe />
         <Slider />
       </div>
     </div>
   </Layout>
+  </div>
+ 
 </template>
 
 

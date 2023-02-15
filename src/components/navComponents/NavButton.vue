@@ -10,7 +10,8 @@
         height: 58.6px;
         background: #408448;
         border-radius: 8px;
-        border: 1px solid #408448;
+        border: 2px solid #408448;
+        
 
         color: white;
         font-family: 'Raleway',sans-serif;
@@ -24,8 +25,8 @@
 
         &:hover{
          
-            color:#408448; 
-          background-color: #ffff;
+         color:#408448; 
+         background-color: #b3b3b300;
             font-weight: bold;
          
         }

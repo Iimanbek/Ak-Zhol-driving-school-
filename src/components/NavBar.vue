@@ -18,8 +18,6 @@
 
             </nav>
         </header>
-
-
     </div>
 </template>
 <script>
@@ -59,19 +57,19 @@ export default {
 .phoneNavbar {
     background-color: #408440;
     height: 100px;
-    display: flex;
-    align-items: center;
     width: 100%;
     display: none;
     position: fixed;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 
-   
 }
 
 .scrollNav {
-    background-color: #464242b2;
+    background-color: rgba(48, 99, 88, 0.966);
     transition: 400ms;
-
+    border-radius: 600px;
+    box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.25);
+    margin-top: 3px;
 }
 
 * {
@@ -91,8 +89,6 @@ export default {
     height: 90px;
     position: relative;
     z-index: 2;
-   
-
 }
 
 nav {
@@ -106,30 +102,33 @@ nav {
         display: flex;
         align-items: center;
         justify-content: space-between;
-
     }
 }
+
 @media screen and (max-width: 1000px) {
     .phoneNavbar {
         display: block;
-       
     }
 }
+
 @media screen and (max-width: 1000px) {
     .dwd {
         display: none;
     }
 }
+
 @media screen and (max-width: 1108px) {
     .navMainConteiner {
         width: 100%;
     }
 }
+
 @media screen and (max-width: 1095px) {
     .navButton {
         margin-left: 35px;
     }
 }
+
 .navButton {
     display: flex;
     align-items: center;
