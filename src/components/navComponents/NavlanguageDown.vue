@@ -98,8 +98,7 @@ export default {
     transition:all 300ms ;
 
     &:hover {
-      background: #408448;
-      border: 1px solid  #408448;
+      border: 1px solid  #ffffff;
     }
   }
 }

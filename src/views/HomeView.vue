@@ -23,7 +23,6 @@ export default {
     </div>
   </Layout>
   </div>
- 
 </template>
 
 

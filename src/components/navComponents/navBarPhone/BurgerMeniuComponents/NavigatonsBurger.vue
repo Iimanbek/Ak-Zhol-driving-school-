@@ -1,7 +1,7 @@
 
-    <template>
+<template>
     <div class="navLinks">
-        <router-link to="#" class="aboutMe">Обо мне</router-link>
+        <router-link to="#">Обо мне</router-link>
         <router-link to="#">Методичка</router-link>
         <router-link to="#">Видеоуроки</router-link>
         <router-link to="#">Отзывы</router-link>
@@ -13,30 +13,29 @@
 .navLinks {
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
-    
+    width: 100%;
+    margin-top: 10px;
 
-    .aboutMe {
-        font-size: 32px;
-        font-weight: 800;
-        color: #408448;
-        line-height: 21px;
-    }
+
+
+
 
     a {
         font-family: 'Raleway', sans-serif;
         font-style: normal;
         font-weight: 700;
-        font-size: 21px;
-        line-height: 21px;
-        color: #000000;
-        transition-duration: 400ms;
+        font-size: 30px;
+        padding: 20px;
+        color: rgba(48, 99, 88, 0.966);
+        transition-duration: 500ms;
         text-decoration: none;
-        margin-bottom: 50px;
+        border-top: 1px solid  rgba(48, 99, 88, 0.966); ;
+
 
         &:hover {
-            color: #408448;
+            color: #ffffff;
             font-weight: 900;
+            background-color: rgba(48, 99, 88, 0.966);
         }
     }
 

@@ -1,20 +1,14 @@
 <template>
-    <div class="meniuDefult" :class="{ activeMeniu: this.openCloseStore.status }">
-        <div class="meniuWrapper">
-            <div class="closeWrapper" @click="closeMeniu" />
-            <div class="contentMeniu " :class="{ activeContentMeniu: this.openCloseStore.status === true }">
-                <div @click="closeMeniu">
-                    <CloseBurButton />
-                </div>
-                <div class="meniuConteiner">
-
-                    <button class="burgerLogo" @click="closeMeniu">
-                        <NavLogo />
-                    </button>
-                    <NavBurger />
-                    <NavButton>Пройти тестирование</NavButton>
-                </div>
-            </div>
+    <div class="meniuDefult" :class="{ activeMeniu: this.openCloseStore.status , CCloseMeniu: this.openCloseStore.status === false}">
+        <div @click="closeMeniu">
+            <CloseBurButton />
+        </div>
+        <div class="conteiner conteiner1">
+            <div @click="closeMeniu"> <NavLogo /></div>
+            <NavBurger />
+        </div>
+        <div class="conteiner conteiner2">
+            <NavButton>Пройти тестирование</NavButton>
         </div>
     </div>
 </template>
@@ -27,6 +21,7 @@ import NavButton from '@/components/navComponents/NavButton.vue'
 import CloseBurButton from './BurgerMeniuComponents/CloseBurButton.vue'
 export default {
     components: {
+        
         NavLogo,
         NavBurger,
         NavButton,
@@ -55,23 +50,56 @@ export default {
     padding: 0;
 
 }
-
+.CCloseMeniu{
+  left: -100%;
+  transition: all 600ms;
+}
 .meniuDefult {
     width: 100%;
-    height: 100vh;
-    background-color: rgb(59, 48, 48);
-    display: none;
+    height: 100%;
+    background-color:rgb(48, 99, 88);
     position: absolute;
     top: 0;
-    left: -1000;
+    left: -100%;
+    display: flex;
+    position: fixed;
+    flex-direction: column;
+    justify-content: flex-end;
+    z-index: 3;
     overflow: hidden;
+
+
+    .conteiner {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    .conteiner1 {
+        height: 70%;
+        overflow: scroll;
+        overflow-x: hidden;
+         background-color: rgba(176, 209, 194, 1);
+         padding-top: 10px;
+
+    }
+
+    .conteiner2 {
+        height: 20%;
+        background-color: rgba(48, 99, 88, 0.966);
+        display: flex;
+        justify-content: center;
+        -webkit-box-shadow: 0px -6px 5px -5px rgba(53, 56, 42, 0.6);
+        -moz-box-shadow: 0px -6px 5px -5px rgba(53, 56, 42, 0.6);
+        box-shadow: 0px -6px 5px -5px rgba(53, 56, 42, 0.6);
+    }
 
 }
 
 .activeMeniu {
-    display: block;
     left: 0;
-
+    transition: all 600ms;
 }
 
 @media screen and (min-width: 1001px) {
@@ -80,4 +108,5 @@ export default {
     }
 
 }
+  
 </style>

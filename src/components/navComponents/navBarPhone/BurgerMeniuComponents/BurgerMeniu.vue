@@ -1,5 +1,4 @@
 <template>
-    <ContentPhoneNav />
     <button @click="this.openCloseStore.open()">
         <span></span>
         <span></span>
@@ -10,11 +9,9 @@
 <script>
 import { mapStores } from 'pinia'
 import { useOpenCloseStore } from '@/store/closeOpenmeniu'
-import ContentPhoneNav from '../ContentPhoneNav.vue'
+
 export default {
-    components: {
-        ContentPhoneNav
-    },
+  
     computed: {
         ...mapStores(useOpenCloseStore)
     },
@@ -42,11 +39,8 @@ button {
 
     &:hover{
         background-color: rgba(48, 99, 88, 0.966);
-        box-shadow: 6px 6px 6px  rgba(0, 0, 0, 0.25);
+        box-shadow: 6px 6px 6px  rgba(53, 49, 49, 0.795);
 
-        span{
-            border: 4px solid #408448;
-        }
     }
 
 

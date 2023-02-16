@@ -1,5 +1,6 @@
 <template>
     <backFigura/>
+    <ContentPhoneNav/>
     <div class="mainWraper">
         <div class="mainConteiner">
             <div class="contConeiner">
@@ -17,12 +18,14 @@
     </div>
 </template>
 <script>
+import ContentPhoneNav from '../components/navComponents/navBarPhone/ContentPhoneNav.vue'
 import NavButton from './navComponents/NavButton.vue';
 import backFigura from './MainPageComponents/BackFigura.vue';
 export default {
     components: {
         NavButton,
-        backFigura
+        backFigura,
+        ContentPhoneNav
     }
 }
 </script>
