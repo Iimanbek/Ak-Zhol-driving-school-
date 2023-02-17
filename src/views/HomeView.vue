@@ -12,7 +12,7 @@ export default {
 </script>
 
 <template>
-  <div class="back_color">
+    <div class="back_color">
     <Layout>
     <div class="main">
       <div class="container">
@@ -23,6 +23,5 @@ export default {
     </div>
   </Layout>
   </div>
+
 </template>
-
-

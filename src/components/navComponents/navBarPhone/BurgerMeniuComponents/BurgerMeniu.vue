@@ -33,15 +33,29 @@ export default {
     box-sizing: border-box;
 }
 
-button {
-    display: none;
-    transition: all 400ms;
+ 
+    button {
+        display: block;
+        width: 80px;
+        height: 80px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+        align-items: center;
+        background: #408448;
+        padding: 1px;
+        padding: 7px;
+        border-radius: 100%;
 
-    &:hover{
+        &:hover{
         background-color: rgba(48, 99, 88, 0.966);
         box-shadow: 6px 6px 6px  rgba(53, 49, 49, 0.795);
 
     }
+    }
+
+
+
 
 
     span {
@@ -53,22 +67,7 @@ button {
        
     }
 
-}
 
-@media screen and (max-width: 1000px) {
-    button {
-        display: block;
-        width: 80px;
-        height: 80px;
-        display: flex;
-        flex-direction: column;
-        justify-content: space-evenly;
-        align-items: center;
-        background: #408448;
-        padding: 1px;
-        margin: 10px;
-        padding: 7px;
-        border-radius: 100%;
-    }
-}
+
+
 </style>

@@ -1,7 +1,5 @@
 <template>
-    <div class="navLogoWrapper">
         <h2> Жакшы Жол</h2>
-    </div>
 </template>
 
 <style lang="scss" scoped>

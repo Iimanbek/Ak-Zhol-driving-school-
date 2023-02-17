@@ -1,6 +1,6 @@
 <template>
     <div class="meniuDefult" :class="{ activeMeniu: this.openCloseStore.status , CCloseMeniu: this.openCloseStore.status === false}">
-        <div @click="closeMeniu">
+            <div @click="closeMeniu">
             <CloseBurButton />
         </div>
         <div class="conteiner conteiner1">
@@ -10,7 +10,7 @@
         <div class="conteiner conteiner2">
             <NavButton>Пройти тестирование</NavButton>
         </div>
-    </div>
+        </div>
 </template>
 <script>
 import { mapStores } from 'pinia'
@@ -44,6 +44,7 @@ export default {
 
 </script>
 <style lang="scss" scoped>
+
 * {
     box-sizing: border-box;
     margin: 0;
@@ -56,7 +57,7 @@ export default {
 }
 .meniuDefult {
     width: 100%;
-    height: 100%;
+    height: 100vh;
     background-color:rgb(48, 99, 88);
     position: absolute;
     top: 0;
@@ -66,7 +67,7 @@ export default {
     flex-direction: column;
     justify-content: flex-end;
     z-index: 3;
-    overflow: hidden;
+    
 
 
     .conteiner {
@@ -78,7 +79,7 @@ export default {
 
     .conteiner1 {
         height: 70%;
-        overflow: scroll;
+        overflow: auto;
         overflow-x: hidden;
          background-color: rgba(176, 209, 194, 1);
          padding-top: 10px;

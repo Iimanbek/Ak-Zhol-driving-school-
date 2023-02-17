@@ -1,7 +1,7 @@
 <template>
     <backFigura/>
     <ContentPhoneNav/>
-    <div class="mainWraper">
+        <div class="mainWraper">
         <div class="mainConteiner">
             <div class="contConeiner">
                 <div class="Header">
@@ -35,7 +35,10 @@ export default {
     margin: 0px;
     box-sizing: border-box;
 }
+ 
+
 .mainWraper {
+
     width: 100%;
     display: flex;
     justify-content: center;
@@ -43,6 +46,7 @@ export default {
     padding-top: 30px;
     height: 580px;
     .mainConteiner {
+        
         width: 100%;
         background: url('../imagesHeader/bacraundMain.jpg');
         background-repeat: no-repeat;
@@ -50,8 +54,7 @@ export default {
         border-radius: 14px;
         display: flex;
         justify-content: center;
-        align-items: center;
-        padding-bottom: 20px;  
+        align-items: center; 
         z-index: 1; 
         box-shadow: 2px 2px 20px 5px  rgba(0, 0, 0, 0.25); 
         .contConeiner {
@@ -92,14 +95,14 @@ export default {
 
     }
 }
-@media screen and (max-width: 1000px) {
-    .mainWraper{
-        margin-top: 20px;
-    }
-}
-@media screen and (max-width: 1000px) {
-    .buttonWrapper{
-        margin-top: 20px;
-    }
-}
+// @media screen and (max-width: 1000px) {
+//     .mainWraper{
+//         margin-top: 20px;
+//     }
+// }
+// @media screen and (max-width: 1000px) {
+//     .buttonWrapper{
+//         margin-top: 20px;
+//     }
+// }
 </style>

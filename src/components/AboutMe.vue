@@ -52,7 +52,7 @@
             </div>
         </div>
 
-    </div>
+</div>
 </template>
 
 <style lang="scss" scoped>
@@ -60,8 +60,9 @@
     box-sizing: border-box;
     padding: 0;
     margin: 0;
-   
+
 }
+
 img {
     width: 100%;
     height: 100%;
@@ -70,7 +71,7 @@ img {
 .headerAboutMe {
     width: 100%;
     padding-bottom: 50px;
-    
+
 
     h2 {
         color: #306358;
@@ -104,7 +105,7 @@ p {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     grid-template-rows: 1fr;
-    grid-auto-rows: minmax(10px, auto);
+    grid-auto-rows: minmax(10px, 10px);
     grid-gap: 10px;
     height: 400px;
     margin-bottom: 50px;
@@ -113,7 +114,7 @@ p {
         background: #D9D9D9;
         border-radius: 12px;
         padding: 7px 7px;
-        box-shadow: 2px 0px 2px 2px  rgba(0, 0, 0, 0.25); 
+        box-shadow: 2px 0px 2px 2px rgba(0, 0, 0, 0.25);
 
 
         .contConteiner {
@@ -142,6 +143,7 @@ p {
     align-items: center;
     justify-content: space-between;
     position: relative;
+    
 
     .betweenContent {
         width: 90%;
@@ -149,11 +151,18 @@ p {
     }
 
     .betwenImg {
-        width: 50%;
-        height: 80%;
-        position: absolute;
-        right: 0%;
-        bottom: 0;
+        width: 100%;
+        height: 50%;
+        position:relative;
+      
+        
+        img{
+            width: 70%;
+            height: 100%;
+            position: absolute;
+            top: 0;
+            right: -5px;
+        }
     }
 }
 
@@ -169,10 +178,10 @@ p {
     justify-content: space-between;
     align-items: center;
 
-                .book{
-                    width: 90%;
-                }
-    
+    .book {
+        width: 90%;
+    }
+
     .imgbetween {
 
         width: 50%;
@@ -180,9 +189,42 @@ p {
         justify-content: flex-start;
     }
 }
-.abouttmeWrapper{
+
+.abouttmeWrapper {
     z-index: 1;
     position: relative;
+}
+
+@media (max-width: 546px) {
+    .wraperBlok {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr 1fr;
+     
+    }
+    .blok_2{
+        height: 100%;
+    }
+    .blok_3{
+        grid-column:2/2;
+        grid-row:2/2;
+        height: 100%;
+    }
+    .blok{
+        display: flex;
+    }
+}
+@media (max-width: 390px) {
+    .wraperBlok{
+      display: flex;
+      flex-direction: column;
+      width: 100%;
+    }
+  .blok_2 {
+  img{
+    display: none;
+  } 
+  }
 }
 </style>
 
