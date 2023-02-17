@@ -2,11 +2,13 @@
 import Slider from "../components/Slider.vue";
 import MainPage from '../components/MainPage.vue';
 import AboutMe from "../components/AboutMe.vue";
+import onLst from "../components/onLst.vue";
 export default {
   components: {
     Slider,
     MainPage,
-    AboutMe
+    AboutMe,
+    onLst
   },
 }; 
 </script>
@@ -18,7 +20,8 @@ export default {
       <div class="container">
           <MainPage />
           <AboutMe />
-        <Slider />
+          <Slider />
+          <!-- <onLst/> -->
       </div>
     </div>
   </Layout>
