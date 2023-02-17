@@ -1,69 +1,44 @@
 <template>
-    <div class="navLinks">
+    <nav class="navLinks">
         <router-link to="#" class="aboutMe">Обо мне</router-link>
         <router-link to="#">Методичка</router-link>
         <router-link to="#">Видеоуроки</router-link>
         <router-link to="#">Отзывы</router-link>
         <router-link to="#">Контакты</router-link>
-    </div>
+    </nav>
 </template>
 
 <style lang="scss" scoped>
 .navLinks {
-    width: 40%;
+    width: 500px;
     display: flex;
-    justify-content: space-between;
+
 
     .aboutMe {
         font-size: 18px;
-        font-weight: bolder;
-        color: #032660;
-        line-height: 21px;
+     
+        color: #408448;
+        font-weight: 400;
+     
     }
 
     a {
         font-family: 'Raleway', sans-serif;
         font-style: normal;
-        font-weight: 400;
+        font-weight: 700;
         font-size: 16px;
-        line-height: 21px;
+        line-height: 19px;
         color: #000000;
         transition-duration: 400ms;
         text-decoration: none;
+        margin: 0px 10px;
 
         &:hover {
-            color: #032660;
+            color: #ffffff;
             font-weight: 900;
         }
     }
 
 }
 
-@media screen and (max-width: 1180px) {
-    .navLinks {
-        margin-left: 30px;
-    }
-}
-
-@media screen and (max-width: 1100px) {
-    .navLinks {
-        flex: none;
-    }
-}
-@media screen and (max-width: 1167px) {
-
-a {
-    margin-left: 10px;
-    height: 20px;
-    width: 150px;
-}
-}
-@media screen and (max-width: 1167px) {
-
-a {
-    margin-left: 10px;
-    height: 20px;
-    width: 150px;
-}
-}
 </style>

@@ -1,95 +1,128 @@
 <template >
-    <div class="mainwrapper">
-        <header>
-            <nav>
-                <BurgerMeniu/>
-                <div class="dwd"> 
-                    <div class="navMainConteiner">
-                       
-                        <NavLogo />
-                        <NavNavigation />
-                        <NavSwich />
-                        <div class="navButton">
-                            <Button-v>
-                                Пройти тестирование
-                            </Button-v>
-                        </div>
+    <div class="boxtop">
+        <header :class="{ scrollNAv: this.heightSCroll > 90 }">
+            <div class="phoneConteiner">
+              <BurgerMeniu/>  
+            </div>
+            <div class="nonBloke">
+                <div class="Mainconteiner">
+                    <NavLogo />
+                    <NavNavigation />
+                    <div class="box">
+                        <language />
+                        <Button-v>Пройти тестирование</Button-v>
                     </div>
                 </div>
-
-            </nav>
+            </div>
         </header>
-
-
-    </div>
+</div>
 </template>
 <script>
-import NavNavigation from '@/components/navComponents/NavNavigations.vue'
-import NavButton from '@/components/navComponents/NavButton.vue'
+import NavNavigation from '../components/navComponents/NavNavigations.vue'
+import NavButton from '@/components/navComponents/NavButton.vue';
 import NavLogo from './navComponents/NavLogo.vue';
-import NavSwich from './navComponents/NavSwich.vue';
 import BurgerMeniu from './navComponents/navBarPhone/BurgerMeniuComponents/BurgerMeniu.vue';
+import language from './navComponents/NavlanguageDown.vue';
+
 export default {
     components: {
         'Button-v': NavButton,
         NavLogo,
         NavNavigation,
-        NavSwich,
         BurgerMeniu,
+        language
+    },
+    data() {
+        return {
+            heightSCroll: 0
+        }
+    },
+    methods: {
+        navScrol() {
+            window.addEventListener('scroll', () => {
+                this.heightSCroll = window.scrollY
+            })
+        }
+    },
+    mounted() {
+        this.navScrol()
     }
+
 }
 </script>
 <style lang="scss" scoped>
 * {
-    padding: 0px;
-    margin: 0px;
-    color: black;
-    text-decoration: none;
-    background-color: #D9D9D9
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
 }
-
-.dwd {
+.phoneConteiner{
     width: 100%;
-    display: flex;
-    justify-content: center;
+    height: 100px;
+    background-color:#408448;
+    display: none;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+
+    padding: 10px 0px;
 }
 
-.mainwrapper {
+.boxtop {
     height: 90px;
+}
+
+.scrollNAv {
+    background-color: #306358;
+    border-radius: 150px;
+    margin-top: 10px;
+    box-shadow: 10px 10px 10px 10px rgba(0, 0, 0, 0.25);
+}
+
+header {
     position: relative;
-    z-index: 1;
-    
-}
-
-nav {
-    width: 100%;
-    border-bottom: 3px solid #032660;
+    z-index: 2;
+    padding: 0 104px;
     position: fixed;
+    width: 100%;
+    transition: all 700ms;
 
-    
-
-    .navMainConteiner {
-        width: 90%;
-        height: 90px;
+    .Mainconteiner {
+        width: 100%;
         display: flex;
-        align-items: center;
         justify-content: space-between;
-
-    }
-
-
-}
-@media screen and (max-width: 1000px) {
-    nav{
-        background-color: #032660;
-        height: 100px;
-        display: flex;
         align-items: center;
+        height: 90px;
+
+        .box {
+            display: flex;
+        }
     }
 }
-@media screen and (max-width: 1000px) {
-    .dwd {
+
+@media (max-width: 1158px) {
+    header {
+        padding: 0px 20px;
+    }
+}
+
+@media (max-width: 1026px) {
+    .scrollNAv {
+        border-radius: 0;
+        margin-top: 0%;
+    }
+
+    header {
+        padding: 0px 10px;
+    }
+}
+
+@media (max-width: 994px) {
+    .nonBloke {
         display: none;
     }
-}
-</style>
+    .phoneConteiner{
+      display: block;
+    }
+    header{
+        padding: 0;
+    }
+}</style>

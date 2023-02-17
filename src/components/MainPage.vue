@@ -1,68 +1,31 @@
 <template>
-    <div class="MainWrapper">
-        <div class="svg">
-            <svg width="45" height="350" viewBox="0 0 48 433" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <line y1="-5" x2="58.2495" y2="-5" transform="matrix(-0.824042 0.566529 0.566529 0.824042 48 9)"
-                    stroke="#032660" stroke-width="10" />
-                <line y1="-5" x2="58.2495" y2="-5" transform="matrix(-0.824042 0.566529 0.566529 0.824042 48 35)"
-                    stroke="#032660" stroke-width="10" />
-                <line y1="-5" x2="58.2495" y2="-5" transform="matrix(-0.824042 0.566529 0.566529 0.824042 48 61)"
-                    stroke="#032660" stroke-width="10" />
-                <line y1="-5" x2="58.2495" y2="-5" transform="matrix(-0.824042 0.566529 0.566529 0.824042 48 87)"
-                    stroke="#032660" stroke-width="10" />
-                <line y1="-5" x2="58.2495" y2="-5" transform="matrix(-0.824042 0.566529 0.566529 0.824042 48 113)"
-                    stroke="#032660" stroke-width="10" />
-                <line y1="-5" x2="58.2495" y2="-5" transform="matrix(-0.824042 0.566529 0.566529 0.824042 48 139)"
-                    stroke="#032660" stroke-width="10" />
-                <line y1="-5" x2="58.2495" y2="-5" transform="matrix(-0.824042 0.566529 0.566529 0.824042 48 165)"
-                    stroke="#032660" stroke-width="10" />
-                <line y1="-5" x2="58.2495" y2="-5" transform="matrix(-0.824042 0.566529 0.566529 0.824042 48 191)"
-                    stroke="#032660" stroke-width="10" />
-                <line y1="-5" x2="58.2495" y2="-5" transform="matrix(-0.824042 0.566529 0.566529 0.824042 48 218)"
-                    stroke="#032660" stroke-width="10" />
-                <line y1="-5" x2="58.2495" y2="-5" transform="matrix(-0.824042 0.566529 0.566529 0.824042 48 244)"
-                    stroke="#032660" stroke-width="10" />
-                <line y1="-5" x2="58.2495" y2="-5" transform="matrix(-0.824042 0.566529 0.566529 0.824042 48 270)"
-                    stroke="#032660" stroke-width="10" />
-                <line y1="-5" x2="58.2495" y2="-5" transform="matrix(-0.824042 0.566529 0.566529 0.824042 48 296)"
-                    stroke="#032660" stroke-width="10" />
-                <line y1="-5" x2="58.2495" y2="-5" transform="matrix(-0.824042 0.566529 0.566529 0.824042 48 322)"
-                    stroke="#032660" stroke-width="10" />
-                <line y1="-5" x2="58.2495" y2="-5" transform="matrix(-0.824042 0.566529 0.566529 0.824042 48 348)"
-                    stroke="#032660" stroke-width="10" />
-                <line y1="-5" x2="58.2495" y2="-5" transform="matrix(-0.824042 0.566529 0.566529 0.824042 48 374)"
-                    stroke="#032660" stroke-width="10" />
-                <line y1="-5" x2="58.2495" y2="-5" transform="matrix(-0.824042 0.566529 0.566529 0.824042 48 400)"
-                    stroke="#032660" stroke-width="10" />
-            </svg>
-        </div>
+    <backFigura/>
+    <ContentPhoneNav/>
+        <div class="mainWraper">
         <div class="mainConteiner">
-            <div class="leftContentWrapper">
-                <div class="contentWrapper">
-                    <div class="mainheader">
-                        <h1>
-                            Почувствуй себя на дороге уверенно!
-                        </h1>
-                    </div>
-                    <div class="paragraf">
-                        <p> Права категории В и восстановление навыков вождения</p>
-                    </div>
-                    <div class="mainButton">
-                        <NavButton>Записаться</NavButton>
-                    </div>
-                </div> 
-            </div>
-            <div class="imgWrapper">
-                <img src="@/mainPageImage/mainPageImage.jpg">
+            <div class="contConeiner">
+                <div class="Header">
+                    <h1>Почувствуй себя на дороге уверенно!</h1>
+                </div>
+                <div class="paragraf">
+                    <p>Права категории В и восстановление навыков вождения</p>
+                </div>
+                <div class="buttonWrapper">
+                    <NavButton>Записаться</NavButton>
+                </div>
             </div>
         </div>
     </div>
 </template>
 <script>
+import ContentPhoneNav from '../components/navComponents/navBarPhone/ContentPhoneNav.vue'
 import NavButton from './navComponents/NavButton.vue';
+import backFigura from './MainPageComponents/BackFigura.vue';
 export default {
     components: {
-        NavButton
+        NavButton,
+        backFigura,
+        ContentPhoneNav
     }
 }
 </script>
@@ -71,64 +34,75 @@ export default {
     padding: 0px;
     margin: 0px;
     box-sizing: border-box;
-    background-color: #D9D9D9
 }
-.MainWrapper {
+ 
+
+.mainWraper {
+
+    width: 100%;
     display: flex;
     justify-content: center;
-    padding: 45px 0;
-
-    .svg{
-        position: absolute;
-        left: 0;
-        top: 280px;
-    }
+    margin: 0  0 100px 0;
+    padding-top: 30px;
+    height: 580px;
     .mainConteiner {
-        width: 90%;
+        
+        width: 100%;
+        background: url('../imagesHeader/bacraundMain.jpg');
+        background-repeat: no-repeat;
+        background-size: cover;
+        border-radius: 14px;
         display: flex;
-        .leftContentWrapper {
-            width: 50%;
+        justify-content: center;
+        align-items: center; 
+        z-index: 1; 
+        box-shadow: 2px 2px 20px 5px  rgba(0, 0, 0, 0.25); 
+        .contConeiner {
+            width: 95%;
+            height: 95%;
             display: flex;
-            align-items: flex-start;
-            padding-left: 20px;
+            flex-direction: column;
+            justify-content: space-around;
 
-            .contentWrapper {
-                height: 80%;
-                display: flex;
-                flex-direction: column;
-                justify-content: space-around;
+            .Header {
+                width: 45%;
 
                 h1 {
-                    font-weight: 600;
-                    font-size: 64px;
-                    line-height: 78.02px;
-                    Font-style: SemiBold;
-                    color: #032660;
-                    font-family: 'Montserrat', sans-serif;
+                    font-family: 'Montserrat' sans-serif;
+                    font-style: normal;
+                    font-weight: 400;
+                    font-size: 60px;
+                    line-height: 78px;
+                    display: flex;
+                    align-items: flex-end;
+                    color: #FFFFFF;
                 }
+            }
+
+            .paragraf {
+                width: 60%;
 
                 p {
-                    font-family: 'Raleway', sans-serif;
-                    font-weight: 500;
+                    font-family: 'Raleway' sans-serif;
+                    font-style: normal;
+                    font-weight: 700;
                     font-size: 26px;
                     line-height: 33px;
-                    Font-style: Medium;
+                    color: #FFFFFF;
                 }
-
-            }
-
-        }
-
-        .imgWrapper {
-            text-align: end;
-            width: 50%;
-
-            img {
-                width: 491px;
-                height: 652px;
-                border-radius: 12px;
             }
         }
+
     }
 }
+// @media screen and (max-width: 1000px) {
+//     .mainWraper{
+//         margin-top: 20px;
+//     }
+// }
+// @media screen and (max-width: 1000px) {
+//     .buttonWrapper{
+//         margin-top: 20px;
+//     }
+// }
 </style>

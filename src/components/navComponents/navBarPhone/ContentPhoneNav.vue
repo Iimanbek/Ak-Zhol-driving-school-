@@ -1,22 +1,16 @@
 <template>
-    <div class="meniuDefult" :class="{ activeMeniu: this.openCloseStore.status }">
-        <div class="meniuWrapper">
-            <div class="closeWrapper" @click="closeMeniu" />
-            <div class="contentMeniu " :class="{ activeContentMeniu: this.openCloseStore.status === true }">
-                <div @click="closeMeniu">
-                    <CloseBurButton />
-                </div>
-                <div class="meniuConteiner">
-
-                    <button class="burgerLogo" @click="closeMeniu">
-                        <NavLogo />
-                    </button>
-                    <NavBurger />
-                    <NavButton>Пройти тестирование</NavButton>
-                </div>
-            </div>
+    <div class="meniuDefult" :class="{ activeMeniu: this.openCloseStore.status , CCloseMeniu: this.openCloseStore.status === false}">
+            <div @click="closeMeniu">
+            <CloseBurButton />
         </div>
-    </div>
+        <div class="conteiner conteiner1">
+            <div @click="closeMeniu"> <NavLogo /></div>
+            <NavBurger />
+        </div>
+        <div class="conteiner conteiner2">
+            <NavButton>Пройти тестирование</NavButton>
+        </div>
+        </div>
 </template>
 <script>
 import { mapStores } from 'pinia'
@@ -27,6 +21,7 @@ import NavButton from '@/components/navComponents/NavButton.vue'
 import CloseBurButton from './BurgerMeniuComponents/CloseBurButton.vue'
 export default {
     components: {
+        
         NavLogo,
         NavBurger,
         NavButton,
@@ -49,80 +44,63 @@ export default {
 
 </script>
 <style lang="scss" scoped>
+
 * {
     box-sizing: border-box;
     margin: 0;
     padding: 0;
 
 }
-
-.closeWrapper {
+.CCloseMeniu{
+  left: -100%;
+  transition: all 600ms;
+}
+.meniuDefult {
     width: 100%;
-    height: 610px;
+    height: 100vh;
+    background-color:rgb(48, 99, 88);
     position: absolute;
     top: 0;
+    left: -100%;
+    display: flex;
+    position: fixed;
+    flex-direction: column;
+    justify-content: flex-end;
+    z-index: 3;
+    
 
 
+    .conteiner {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-between;
+    }
 
-}
+    .conteiner1 {
+        height: 70%;
+        overflow: auto;
+        overflow-x: hidden;
+         background-color: rgba(176, 209, 194, 1);
+         padding-top: 10px;
 
-.meniuDefult {
-    display: none;
-}
+    }
 
-
-
-.activeMeniu {
-    display: block;
-    position: absolute;
-    top: 0px;
-
-}
-
-.meniuWrapper {
-    position: relative;
-    background-color: rgba(0, 0, 0, 0.61);
-    width: 1000px;
-    height: 610px;
-
-
-
-
-
-    .contentMeniu {
-        width: 400px;
-        position: absolute;
-        top: 0px;
-        left: -400px;
-        background-color: rgb(255, 255, 255);
+    .conteiner2 {
+        height: 20%;
+        background-color: rgba(48, 99, 88, 0.966);
         display: flex;
         justify-content: center;
-        border-radius: 10px;
-        -webkit-box-shadow: 4px 4px 8px 0px #032660;
-        -moz-box-shadow: 4px 4px 8px 0px #032660;
-        box-shadow: 4px 4px 8px 0px #032660;
-        border: 2px solid #033a94;
-
-
+        -webkit-box-shadow: 0px -6px 5px -5px rgba(53, 56, 42, 0.6);
+        -moz-box-shadow: 0px -6px 5px -5px rgba(53, 56, 42, 0.6);
+        box-shadow: 0px -6px 5px -5px rgba(53, 56, 42, 0.6);
     }
 
-    .activeContentMeniu {
-        position: absolute;
-        left: 0;
+}
 
-        .meniuConteiner {
-            width: 90%;
-            display: flex;
-            flex-direction: column;
-            align-items: flex-start;
-            padding: 50px 30px;
-
-            .burgerLogo {
-                margin-bottom: 50px;
-                cursor: pointer;
-            }
-        }
-    }
+.activeMeniu {
+    left: 0;
+    transition: all 600ms;
 }
 
 @media screen and (min-width: 1001px) {
@@ -131,4 +109,5 @@ export default {
     }
 
 }
+  
 </style>

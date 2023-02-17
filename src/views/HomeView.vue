@@ -1,28 +1,26 @@
 <script>
+import Slider from "../components/Slider.vue";
 import MainPage from '../components/MainPage.vue';
-import sliderss from '../components/Slider.vue'
-import onLst from '../components/onLst.vue';
+import AboutMe from "../components/AboutMe.vue";
 export default {
-  components : {
+  components: {
+    Slider,
     MainPage,
-    sliderss,
-    onLst
-  }
-}
+    AboutMe
+  },
+}; 
 </script>
 
 <template>
-  <Layout>
+    <div class="back_color">
+    <Layout>
     <div class="main">
-      <MainPage/>
-      <sliderss/>
-      <onLst/>
+      <div class="container">
+          <MainPage />
+          <AboutMe />
+        <Slider />
+      </div>
     </div>
   </Layout>
+  </div>
 </template>
-
-<style lang="scss">
-.main{
-  // height: 200vh ;
-}
-</style>
