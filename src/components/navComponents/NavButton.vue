@@ -1,35 +1,29 @@
 <template>
-    <button class="button">
-        <slot/>
+    <button >
+        <slot />
     </button>
 </template>
 
 <style lang="scss" scoped>
-.button {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-    padding: 20px;
-    gap: 10px;
-    background: #032660;
-    border: 3px solid #032660;
-    border-radius: 8px;
-    font-family: 'Raleway', sans-serif;
-    font-style: normal;
-    font-weight: 500;
-    font-size: 18px;
-    line-height: 21px;
-    color: #fff;
-    transition-duration: 300ms;
+    button{
+        width: 213px;
+        height: 58.6px;
+        background-color:rgba(3, 38, 96, 1);
+        border-radius: 8px;
+        color: white;
+        font-family: 'Raleway',sans-serif;
+        font-size: 18px;
+        line-height: 21px;
+        transition: 200ms;
+        transition-duration: 300ms;
+        border: 3px solid rgba(3, 38, 96, 1);
 
-
-    &:hover {
-        background: #fff;
-        color: #032660;
-        font-weight: bold;
+        &:hover{
+            color:rgba(3, 38, 96, 1); 
+            background-color: #fff;
+            font-weight: bold;
+         
+        }
     }
 
-
-}
 </style>
