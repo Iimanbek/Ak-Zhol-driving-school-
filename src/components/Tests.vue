@@ -5,9 +5,10 @@
           <h3> <span>{{ this.$route.params.id}}.</span> {{ qst?.question }}</h3>
             <v-radio-group class="rssdio-group" v-model="valueStore.valueRadio">
               <v-radio
+                  v-for="opt in qst?.variants"
                   :label="opt"
                   :value="opt"
-                  v-for="opt in qst?.variants"
+                  :color="wrongANSwer"
               ></v-radio>
             </v-radio-group>
         </div>
@@ -28,6 +29,7 @@
           class="nextBtn"
           variant="flat"
           color="#408448"
+          @click="nextPage"
           >Дальше</v-btn>
         </div>
       </div>
@@ -39,6 +41,7 @@
   import { useValueStore } from '../store/getValue';
   export default {
     data: () => ({
+      wrongANSwer: false ,
       buttonActive: true,
       qst: null,
       qstAnswers:null,
@@ -64,17 +67,30 @@
           }
           if (this.qstAnswers.answer === this.valueStore.valueRadio) {
             this.valueStore.ANSWERS += 1
-            this.$router.replace({ path: `/testing/${+idd + 1}`});
+            // this.$router.replace({ path: `/testing/${+idd + 1}`});
+            this.wrongANSwer = 'green'
+            this.buttonActive = false
+            this.descriptions = true
+            
           }else{
             this.valueStore.NOANSWERS += 1
             this.descriptions = true
             this.buttonActive = false
-            console.log(this.valueStore.NOANSWERS);
+            this.wrongANSwer = 'red'
+            
             if (this.valueStore.NOANSWERS === 3){
               this.$router.replace({ path: '/finsh'})
             }
           }
         }
+      },
+      async nextPage(){
+        const idd = this.$route.params.id;
+        this.$router.replace({ path: `/testing/${+idd + 1}`});
+        this.buttonActive = true
+        this.descriptions = false
+        this.wrongANSwer = false
+        
         this.valueStore.valueRadio = ''
       }
     },
