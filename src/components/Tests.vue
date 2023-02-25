@@ -1,5 +1,15 @@
 <template>
     <div class="about">
+      <div class="header_card_wrapper">
+        <div>
+          <span>Вопрос {{ this.$route.params.id }} из <span> {{ valueStore?.dataQst?.length }} </span></span>
+        </div>
+        <div>
+          <div>
+            <span>Набранно баллов: {{ valueStore.ANSWERS }} из <span>{{ valueStore?.dataQst?.length }}</span></span>
+          </div>
+        </div>
+      </div>
       <div class="cardd-wrapper">
         <div>
           <h3> <span>{{ this.$route.params.id}}.</span> {{ qst?.question }}</h3>
@@ -9,6 +19,7 @@
                   :label="opt"
                   :value="opt"
                   :color="wrongANSwer"
+                  :readonly="options_dis"
               ></v-radio>
             </v-radio-group>
         </div>
@@ -41,7 +52,8 @@
   import { useValueStore } from '../store/getValue';
   export default {
     data: () => ({
-      wrongANSwer: false ,
+      options_dis: false ,
+      wrongANSwer: 'black' ,
       buttonActive: true,
       qst: null,
       qstAnswers:null,
@@ -69,13 +81,16 @@
             this.valueStore.ANSWERS += 1
             // this.$router.replace({ path: `/testing/${+idd + 1}`});
             this.wrongANSwer = 'green'
+            this.options_dis = true
             this.buttonActive = false
             this.descriptions = true
             
           }else{
             this.valueStore.NOANSWERS += 1
+            console.log(this.valueStore.NOANSWERS );
             this.descriptions = true
             this.buttonActive = false
+            this.options_dis = true
             this.wrongANSwer = 'red'
             
             if (this.valueStore.NOANSWERS === 3){
@@ -89,8 +104,8 @@
         this.$router.replace({ path: `/testing/${+idd + 1}`});
         this.buttonActive = true
         this.descriptions = false
-        this.wrongANSwer = false
-        
+        this.wrongANSwer = 'black'
+        this.options_dis = false
         this.valueStore.valueRadio = ''
       }
     },
@@ -119,6 +134,7 @@
   .about{
     display: flex;
     justify-content: center;
+    flex-direction: column;
     align-items: center;
     height: 100vh;
     background: rgba(48, 99, 88, 1);
@@ -158,6 +174,13 @@
     p{
       font-weight: 300;
     }
+  }
+  .header_card_wrapper{
+    display: flex;
+    justify-content: space-between;
+    width: 490px;
+    padding-bottom: 10px;
+    color: white;
   }
   </style>
   
