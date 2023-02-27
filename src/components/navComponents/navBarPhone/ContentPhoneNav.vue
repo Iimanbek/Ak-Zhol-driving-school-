@@ -59,7 +59,8 @@ export default {
     width: 100%;
     height: 100vh;
     background-color:rgb(48, 99, 88);
-    position: absolute;
+    position: fixed;
+
     top: 0;
     left: -100%;
     display: flex;
@@ -67,6 +68,7 @@ export default {
     flex-direction: column;
     justify-content: flex-end;
     z-index: 3;
+  
     
 
 

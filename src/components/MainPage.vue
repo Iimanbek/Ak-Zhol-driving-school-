@@ -1,11 +1,10 @@
 <template>
-    <backFigura/>
-    <ContentPhoneNav/>
-        <div class="mainWraper">
+    <ContentPhoneNav />
+    <div class="mainWraper" :class="{ mobile280: this.AppWith < 376}">
         <div class="mainConteiner">
             <div class="contConeiner">
                 <div class="Header">
-                    <h1>Почувствуй себя на дороге уверенно!</h1>
+                    <h1 :class="{ mobileHeader: this.AppWith < 332}">Почувствуй себя на дороге уверенно!</h1>
                 </div>
                 <div class="paragraf">
                     <p>Права категории В и восстановление навыков вождения</p>
@@ -20,13 +19,27 @@
 <script>
 import ContentPhoneNav from '../components/navComponents/navBarPhone/ContentPhoneNav.vue'
 import NavButton from './navComponents/NavButton.vue';
-import backFigura from './MainPageComponents/BackFigura.vue';
 export default {
     components: {
         NavButton,
-        backFigura,
         ContentPhoneNav
-    }
+    },
+    data() {
+        return {
+            AppWith: 0
+        }
+    },
+    
+    methods: {
+       mobileWith() {
+        this.AppWith = window.innerWidth
+       }
+    },
+    mounted() {
+        window.addEventListener('resize',this.mobileWith)
+    },
+  
+
 }
 </script>
 <style lang="scss" scoped>
@@ -35,18 +48,19 @@ export default {
     margin: 0px;
     box-sizing: border-box;
 }
- 
+
 
 .mainWraper {
 
     width: 100%;
     display: flex;
     justify-content: center;
-    margin: 0  0 100px 0;
+    margin: 0 0 100px 0;
     padding-top: 30px;
     height: 580px;
+
     .mainConteiner {
-        
+
         width: 100%;
         background: url('../imagesHeader/bacraundMain.jpg');
         background-repeat: no-repeat;
@@ -54,9 +68,10 @@ export default {
         border-radius: 14px;
         display: flex;
         justify-content: center;
-        align-items: center; 
-        z-index: 1; 
-        box-shadow: 2px 2px 20px 5px  rgba(0, 0, 0, 0.25); 
+        align-items: center;
+        z-index: 1;
+        box-shadow: 2px 2px 20px 5px rgba(0, 0, 0, 0.25);
+
         .contConeiner {
             width: 95%;
             height: 95%;
@@ -95,14 +110,22 @@ export default {
 
     }
 }
-// @media screen and (max-width: 1000px) {
-//     .mainWraper{
-//         margin-top: 20px;
-//     }
-// }
-// @media screen and (max-width: 1000px) {
-//     .buttonWrapper{
-//         margin-top: 20px;
-//     }
-// }
+.mobile280{
+ width: 100%;
+ padding: 0;
+ height: 630px;
+ margin-bottom: 60px;
+
+h1{
+   line-height:normal !important;
+   font-size: 50px !important;
+}
+ .mainConteiner{
+    height: 100% ;
+    border-radius: 0px;
+    margin: 0;
+    padding: 0; 
+ }
+
+}
 </style>
