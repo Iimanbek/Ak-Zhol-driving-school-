@@ -10,5 +10,6 @@ export const useOpenCloseStore = defineStore('openClose', {
         close() {
             this.status = false
         }
+        
     }
 })

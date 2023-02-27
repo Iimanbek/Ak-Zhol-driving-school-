@@ -1,5 +1,5 @@
 <template>
-        <h2> Жакшы Жол</h2>
+        <h2>Жакшы Жол</h2>
 </template>
 
 <style lang="scss" scoped>

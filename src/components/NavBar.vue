@@ -10,7 +10,7 @@
                     <NavNavigation />
                     <div class="box">
                         <language />
-                        <Button-v>Пройти тестирование</Button-v>
+                        <Button-v> <router-link class="testingPush" to="/testing/1"> Пройти тестирование</router-link></Button-v>
                     </div>
                 </div>
             </div>
@@ -125,4 +125,9 @@ header {
     header{
         padding: 0;
     }
-}</style>
+}
+.testingPush{
+    color: white;
+    text-decoration: none;
+}
+</style>
