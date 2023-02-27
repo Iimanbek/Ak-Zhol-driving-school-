@@ -58,6 +58,7 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+
 * {
   box-sizing: border-box;
   padding: 0;
@@ -65,10 +66,11 @@ export default {
   cursor: pointer;
 }
 .kgzLang{
-  background-color:#408448;
+  background-color:#306358;
+
 }
 .ruLang{
-  background-color:#408448;
+  background-color :#306358;
 }
 .russ {
   display: none;
@@ -99,6 +101,12 @@ export default {
 
     &:hover {
       border: 1px solid  #ffffff;
+      span{
+        color: #ffffff;
+      }
+      svg{
+        fill: #000000;
+      }
     }
   }
 }
@@ -131,7 +139,6 @@ span {
 .dropdown:hover .contDr_Down {
   display: block;
 }
-
 .lang {
   transition: all 300ms;
   width: 170px;
@@ -140,7 +147,13 @@ span {
   border-radius: 10px;
 
   &:hover {
-    background-color: #00000086;
+    span{
+      color: #ffffff;
+    }
+    background-color:#408448;  
+  }
+  &:active{
+    background-color: #4d3737c0;
   }
 }
 </style>

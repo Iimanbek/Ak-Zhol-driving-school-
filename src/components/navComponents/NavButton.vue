@@ -16,9 +16,7 @@ button {
     height: 58.6px;
     background: #408448;
     border-radius: 8px;
-
     transition: box-shadow 0.5s, transform 0.5s;
-    transform: scale(1);
     color: white;
     font-family: 'Raleway', sans-serif;
     font-style: normal;
@@ -26,17 +24,23 @@ button {
     font-size: 18px;
     line-height: 21px;
     transition: all 200ms;
+    transform: scale(1);
 
 
 
     &:hover {
         border: 1px solid #fff;
-        transform: scale(1.1);
+        transform: scale(1.050);
         box-shadow: 0 0 15px 7px rgba(248, 255, 246, 0.219);
         transition: box-shadow 0.5s, transform 0.5s;
         font-weight: bold;
         background-color: #ffffff00;
 
+    }
+    &:active{
+        background-color: #00000028;
+        transform: scale(1);
+        box-shadow: none;
     }
 }
 </style>

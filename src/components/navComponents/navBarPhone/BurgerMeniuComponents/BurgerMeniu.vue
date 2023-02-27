@@ -32,8 +32,6 @@ export default {
     margin: 0;
     box-sizing: border-box;
 }
-
- 
     button {
         display: block;
         width: 80px;
@@ -50,7 +48,6 @@ export default {
         &:hover{
         background-color: rgba(48, 99, 88, 0.966);
         box-shadow: 6px 6px 6px  rgba(53, 49, 49, 0.795);
-
     }
     }
 

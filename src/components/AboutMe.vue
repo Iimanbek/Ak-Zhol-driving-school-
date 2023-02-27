@@ -162,6 +162,7 @@ p {
             position: absolute;
             top: 0;
             right: -5px;
+            object-fit: cover;
         }
     }
 }
@@ -183,15 +184,15 @@ p {
     }
 
     .imgbetween {
-
         width: 50%;
         display: flex;
         justify-content: flex-start;
+      
     }
 }
 
 .abouttmeWrapper {
-    z-index: 1;
+    
     position: relative;
 }
 

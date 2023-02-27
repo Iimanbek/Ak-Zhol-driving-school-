@@ -1,7 +1,7 @@
 import { defineStore } from "pinia";
 export const useOpenCloseStore = defineStore('openClose', {
     state: () => ({
-        status: null
+        status: false
     }),
     actions: {
         open() {
