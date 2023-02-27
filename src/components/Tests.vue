@@ -13,7 +13,8 @@
             <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" style="fill: red ;transform: ;msFilter:;"><path d="M12 4c-4.879 0-9 4.121-9 9s4.121 9 9 9 9-4.121 9-9-4.121-9-9-9zm0 16c-3.794 0-7-3.206-7-7s3.206-7 7-7 7 3.206 7 7-3.206 7-7 7z"></path><path d="M13 12V8h-2v6h6v-2zm4.284-8.293 1.412-1.416 3.01 3-1.413 1.417zm-10.586 0-2.99 2.999L2.29 5.294l2.99-3z"></path></svg>
           </div>
           <div>
-            <span>{{ timerStore.displayMinutes }} : </span><span>{{ timerStore.displaySeconds }}</span>
+            <!-- <span>{{ timerStore.displayMinutes }} : </span><span>{{ timerStore.displaySeconds }}</span> -->
+            <v-timer/>
           </div>
         </div>
         </div>
@@ -56,10 +57,14 @@
   </template>
   
   <script>
+  import Timer from '../components/Timer.vue'
   import { mapStores } from 'pinia';
   import { useTimerStore } from '../store/Timer'
   import { useValueStore } from '../store/getValue';
   export default {
+    components:{
+      'v-timer':Timer
+    },
     data: () => ({
       options_dis: false ,
       wrongANSwer: 'black' ,
@@ -117,45 +122,11 @@
         this.options_dis = false
         this.valueStore.valueRadio = ''
       },
-      showRemaining(){
-        const timer = setInterval(() => {
-          const now = new Date();
-          const end = new Date(2020, 4,22, 10, 10, 10, 10);
-          const distance = end.getTime() - now.getTime();
-
-          if (distance < 0) {
-            clearInterval(timer)
-            return
-          }
-          const days = Math.floor((distance / this._days))
-          const hours = Math.floor((distance % this._days) / this._hours );
-          const minutes = Math.floor((distance % this._hours) / this._minutes );
-          const seconds = Math.floor((distance % this._minutes) / this._seconds );
-          this.timerStore.displayDays = days < 10 ? "0" + days : days ; 
-          this.timerStore.displayHours = hours < 10 ? "0"  + hours : hours ; 
-          this.timerStore.displayMinutes = minutes < 10 ? "0"  + minutes : minutes ; 
-          this.timerStore.displaySeconds = seconds < 10 ? "0" + seconds : seconds ;   
-
-        }, 1000)
-      }
     },
     mounted() {
-      // this.getData()
-      // this.showRemaining()
       this.valueStore.getQST()
     },
     computed:{
-      _seconds: () => 1000,
-      _minutes(){
-        return this._seconds * 60;
-      },
-      _hours(){
-        return this._minutes * 60;
-      },
-      _days(){
-        return this._hours * 24;
-      },
-
     },
     
     updated() {
