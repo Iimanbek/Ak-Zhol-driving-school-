@@ -89,7 +89,7 @@
           const idd = this.$route.params.id;
           // this.$router.replace({ path: `/testing/${+idd + 1}`});
           if (this.$route.params.id >= this.valueStore.dataQst.length ){
-            this.$router.replace({ path: '/finsh'})
+            this.$router.replace({ path: '/testingg/finish'})
           }
           if (this.qstAnswers.answer === this.valueStore.valueRadio) {
             this.valueStore.ANSWERS += 1
@@ -108,7 +108,7 @@
             this.wrongANSwer = 'red'
             
             if (this.valueStore.NOANSWERS === 3){
-              this.$router.replace({ path: '/finsh'})
+              this.$router.replace({ path: '/testingg/finish'})
             }
           }
         }
