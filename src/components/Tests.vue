@@ -90,6 +90,7 @@
           // this.$router.replace({ path: `/testing/${+idd + 1}`});
           if (this.$route.params.id >= this.valueStore.dataQst.length ){
             this.$router.replace({ path: '/testingg/finish'})
+            this.valueStore.testFinish = 'Тест пройден'
           }
           if (this.qstAnswers.answer === this.valueStore.valueRadio) {
             this.valueStore.ANSWERS += 1
@@ -109,6 +110,7 @@
             
             if (this.valueStore.NOANSWERS === 3){
               this.$router.replace({ path: '/testingg/finish'})
+              this.valueStore.testFinish = 'Тест не пройден'
             }
           }
         }

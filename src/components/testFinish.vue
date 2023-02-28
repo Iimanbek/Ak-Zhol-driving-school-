@@ -1,7 +1,7 @@
 <template>
     <div class="main_wrapper">
         <div class="result_wrapper">
-            <h1>Вы выйграли</h1>
+            <h1 :style="{'color': colorofH }">{{ valueStore.testFinish }}</h1>
             <h3>Вы набрали {{ valueStore.ANSWERS }} </h3>
         </div>
     </div>
@@ -12,7 +12,7 @@ import { useValueStore } from '../store/getValue';
 export default {
     data() {
         return {
-
+            colorofH:''
         }
     },
     methods: {
@@ -22,6 +22,11 @@ export default {
         // this.returnnn()
     },
     mounted() {
+        if (this.valueStore.testFinish.length === 3) {
+            this.colorofH = 'red' 
+        }else{
+            this.colorofH = 'rgba(48, 99, 88, 1)'
+        }
     },
     computed:{
         ...mapStores(useValueStore)
@@ -58,7 +63,7 @@ export default {
   border-radius: 10px;
   h1{
     text-align: center;
-    color: rgba(48, 99, 88, 1);
+    // color: rgba(48, 99, 88, 1);
   }
 }
 .main_wrapper{

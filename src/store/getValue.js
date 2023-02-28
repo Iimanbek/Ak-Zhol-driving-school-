@@ -11,7 +11,8 @@ export const useValueStore = defineStore('value',{
         dataQst: null,
         dataAnswers: null,
         ANSWERS: 0,
-        NOANSWERS: 0
+        NOANSWERS: 0,
+        testFinish: ''
     }),
     actions:{
         async getQST(){

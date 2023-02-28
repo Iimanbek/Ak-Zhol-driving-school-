@@ -11,7 +11,7 @@
                         <p>студентов <br> подготовил <br> индивидуально к практическому вождению</p>
                     </div>
                     <div class="imgConeiner">
-                        <img src="../imagesAboutme/lsd5bncnvkaa6qq0qtp4l8w2sezwshtk 1.png">
+                        <img src="../imagesAboutme/lslsl.png">
                     </div>
                 </div>
             </div>
@@ -46,7 +46,7 @@
                         <p>студентов <br> было выпущено в автошколе</p>
                     </div>
                     <div class="imgConeiner">
-                        <img src="../imagesAboutme/a7c63e6182e05103b9ededcf4a3fe8ad 1.png">
+                        <img src="../imagesAboutme/imageAboutme.png">
                     </div>
                 </div>
             </div>
