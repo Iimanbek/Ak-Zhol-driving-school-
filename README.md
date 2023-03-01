@@ -19,7 +19,7 @@ npm install
 ## Run server
 
 ```sh
-json-server ---watch db.json
+json-server --watch db.json
 ```
 
 ### Compile and Hot-Reload for Development
