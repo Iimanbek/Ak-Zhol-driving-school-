@@ -1,10 +1,10 @@
 <template>
     <ContentPhoneNav />
-    <div class="mainWraper" :class="{ mobile280: this.AppWith < 376}">
+    <div class="mainWraper" :class="{ mobile280: this.AppWith < 376 }">
         <div class="mainConteiner">
             <div class="contConeiner">
                 <div class="Header">
-                    <h1 :class="{ mobileHeader: this.AppWith < 332}">Почувствуй себя на дороге уверенно!</h1>
+                    <h1 :class="{ mobileHeader: this.AppWith < 332 }">Почувствуй себя на дороге уверенно!</h1>
                 </div>
                 <div class="paragraf">
                     <p>Права категории В и восстановление навыков вождения</p>
@@ -29,16 +29,16 @@ export default {
             AppWith: 0
         }
     },
-    
+
     methods: {
-       mobileWith() {
-        this.AppWith = window.innerWidth
-       }
+        mobileWith() {
+            this.AppWith = window.innerWidth
+        }
     },
     mounted() {
-        window.addEventListener('resize',this.mobileWith)
+        window.addEventListener('resize', this.mobileWith)
     },
-  
+
 
 }
 </script>
@@ -60,11 +60,11 @@ export default {
     height: 580px;
 
     .mainConteiner {
-
         width: 100%;
         background: url('@/assets/images/bacraundMain.jpg');
         background-repeat: no-repeat;
-        background-size: cover;
+        background-size: cover ;
+        background-attachment: fixed;
         border-radius: 14px;
         display: flex;
         justify-content: center;
@@ -110,22 +110,24 @@ export default {
 
     }
 }
-.mobile280{
- width: 100%;
- padding: 0;
- height: 630px;
- margin-bottom: 60px;
 
-h1{
-   line-height:normal !important;
-   font-size: 50px !important;
-}
- .mainConteiner{
-    height: 100% ;
-    border-radius: 0px;
-    margin: 0;
-    padding: 0; 
- }
+.mobile280 {
+    width: 100%;
+    padding: 0;
+    height: 630px;
+    margin-bottom: 60px;
+
+    h1 {
+        line-height: normal !important;
+        font-size: 50px !important;
+    }
+
+    .mainConteiner {
+        height: 100%;
+        border-radius: 0px;
+        margin: 0;
+        padding: 0;
+    }
 
 }
 </style>
