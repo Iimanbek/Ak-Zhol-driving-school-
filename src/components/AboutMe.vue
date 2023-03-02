@@ -11,7 +11,7 @@
                         <p>студентов <br> подготовил <br> индивидуально к практическому вождению</p>
                     </div>
                     <div class="imgConeiner">
-                        <img src="../imagesAboutme/lslsl.png">
+                        <img src="@/assets/images/carGerl.png">
                     </div>
                 </div>
             </div>
@@ -22,7 +22,7 @@
                 </div>
                 <div class="betwenImg">
                     <img
-                        src="../imagesAboutme/png-transparent-2016-hyundai-accent-se-used-car-2017-hyundai-accent-se-hyundai-compact-car-sedan-car 1.png">
+                        src="@/assets/images/honda.png">
                 </div>
 
             </div>
@@ -34,7 +34,7 @@
                 </div>
                 <div class="book">
                     <div class="imgbetween">
-                        <img src="../imagesAboutme/1644447543_18-phonoteka-org-p-fon-uchebniki-51 2.png">
+                        <img src="@/assets/images/book.png">
                     </div>
                 </div>
 
@@ -46,7 +46,7 @@
                         <p>студентов <br> было выпущено в автошколе</p>
                     </div>
                     <div class="imgConeiner">
-                        <img src="../imagesAboutme/imageAboutme.png">
+                        <img src="@/assets/images/carMark.png">
                     </div>
                 </div>
             </div>
@@ -192,17 +192,20 @@ p {
 }
 
 .abouttmeWrapper {
-    
     position: relative;
 }
 
-@media (max-width: 546px) {
+@media (max-width: 546px)  {
+    .abouttmeWrapper{
+        height: 90vh;
+    }
     .wraperBlok {
         display: grid;
         grid-template-columns: 1fr 1fr;
         grid-template-rows: 1fr 1fr;
      
     }
+
     .blok_2{
         height: 100%;
     }
@@ -216,17 +219,17 @@ p {
     }
 }
 @media (max-width: 390px) {
+    
+    .abouttmeWrapper{
+        height: 140vh;
+    }
     .wraperBlok{
       display: flex;
       flex-direction: column;
       width: 100%;
     }
-  .blok_2 {
-  img{
-    display: none;
-  } 
-  }
 }
+
 </style>
 
      

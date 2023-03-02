@@ -62,7 +62,7 @@ export default {
     .mainConteiner {
 
         width: 100%;
-        background: url('../imagesHeader/bacraundMain.jpg');
+        background: url('@/assets/images/bacraundMain.jpg');
         background-repeat: no-repeat;
         background-size: cover;
         border-radius: 14px;
