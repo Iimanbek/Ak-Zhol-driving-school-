@@ -6,13 +6,15 @@ import MainPage from '../components/MainPage.vue';
 import AboutMe from "../components/AboutMe.vue";
 import onLst from "../components/onLst.vue";
 import BackFigura from "../components/MainPageComponents/BackFigura.vue";
+import InformationTest from '../components/InformationTest.vue';
 export default {
   components: {
     Slider,
     MainPage,
     AboutMe,
     onLst,
-    BackFigura
+    BackFigura,
+    InformationTest
   },
   computed: {
         ...mapStores(useOpenCloseStore)
@@ -30,7 +32,7 @@ export default {
           <MainPage />
           <AboutMe />
           <Slider />
-          <!-- <onLst/> -->
+          <InformationTest/>
         </div>
       </div>
     </Layout>
