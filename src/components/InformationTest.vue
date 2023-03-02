@@ -18,6 +18,8 @@
     </div>
 </template>
 <script>
+
+
 import NavBuuton from '@/components/navComponents/NavButton.vue'
 export default {
     components: {
