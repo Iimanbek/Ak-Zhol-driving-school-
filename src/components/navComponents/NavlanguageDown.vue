@@ -1,8 +1,8 @@
 <template>
   <div class="dropdown">
     <div class="valueDr_Down">
-      <img class="kg" :class="{ kgactive: this.flagstatus }" src="@/iconsHeader/Kyrgyzstan.png" />
-      <img :class="{ russ: this.flagstatus }" src="@/iconsHeader/Russia.png" />
+      <img class="kg" :class="{ kgactive: this.flagstatus }" src="@/assets/images/Kyrgyzstan.png" />
+      <img :class="{ russ: this.flagstatus }" src="@/assets/images/Russia.png" />
       <span>{{ this.nameLang }}</span>
       <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg"
         xmlns:xlink="http://www.w3.org/1999/xlink">
@@ -18,11 +18,11 @@
     </div>
     <div class="contDr_Down">
       <div class="lang" :class="{ruLang : this.flagstatus === false}" @click="russia">
-        <img src="@/iconsHeader/Russia.png">
+        <img src="@/assets/images/Russia.png">
         <span>(Русс) Русский</span>
       </div>
       <div class="lang" :class="{kgzLang: this.flagstatus}" @click="kgz">
-        <img src="@/iconsHeader/Kyrgyzstan.png">
+        <img src="@/assets/images/Kyrgyzstan.png">
         <span>(Кыр) Кыргызча</span>
       </div>
     </div>
@@ -35,7 +35,7 @@ export default {
     return {
       flagstatus: false,
       nameLang: 'Русс',
-      // для изменения языка
+     
       statuslang: false
     }
 
@@ -136,8 +136,10 @@ span {
   margin-left: 10px;
 }
 
+
 .dropdown:hover .contDr_Down {
   display: block;
+
 }
 .lang {
   transition: all 300ms;
