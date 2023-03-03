@@ -6,14 +6,17 @@ import MainPage from '../components/MainPage.vue';
 import AboutMe from "../components/AboutMe.vue";
 import onLst from "../components/onLst.vue";
 import BackFigura from "../components/MainPageComponents/BackFigura.vue";
-import customCursor from '../components/customCursor.vue';
+import InformationTest from '../components/InformationTest.vue';
+import HowToContactWithMe from '../components/HowToContactWithMe.vue';
 export default {
   components: {
     Slider,
     MainPage,
     AboutMe,
     onLst,
-    BackFigura
+    BackFigura,
+    InformationTest,
+    HowToContactWithMe
   },
   computed: {
         ...mapStores(useOpenCloseStore)
@@ -31,7 +34,8 @@ export default {
           <MainPage />
           <AboutMe />
           <Slider />
-          <!-- <onLst/> -->
+          <InformationTest/>
+          <HowToContactWithMe/>
         </div>
       </div>
     </Layout>

@@ -16,7 +16,7 @@ import { useValueStore } from '../store/getValue';
 export default{
     data:() => ({
         timer: null,
-        totalTime: (1 * 60),
+        totalTime: (20 * 60),
         resetButton: false,
         title: "Countdown to rest time!",
         edit: false
