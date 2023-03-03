@@ -9,7 +9,6 @@ import BackFigura from "../components/MainPageComponents/BackFigura.vue";
 import customCursor from '../components/customCursor.vue';
 export default {
   components: {
-    'v-custom':customCursor,
     Slider,
     MainPage,
     AboutMe,
@@ -27,7 +26,6 @@ export default {
     <div class="back_color" :class="{activScrolnon: this.openCloseStore.status}">
     <Layout>
       <div class="main">
-        <v-custom/>
         <div class="container">
           <BackFigura />
           <MainPage />
