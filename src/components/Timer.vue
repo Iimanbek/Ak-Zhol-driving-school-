@@ -11,10 +11,12 @@
 
 
 <script>
+import { mapStores } from 'pinia';
+import { useValueStore } from '../store/getValue';
 export default{
     data:() => ({
         timer: null,
-        totalTime: (25 * 60),
+        totalTime: (1 * 60),
         resetButton: false,
         title: "Countdown to rest time!",
         edit: false
@@ -46,6 +48,7 @@ export default{
     }
   },
   computed: {
+    ...mapStores(useValueStore),
     minutes: function(){
       const minutes = Math.floor(this.totalTime / 60);
       return this.padTime(minutes);
@@ -57,6 +60,14 @@ export default{
   },
   mounted(){
     this.startTimer()
+  },
+  watch:{
+    totalTime(){
+      if (this.totalTime === 0) {
+        this.$router.push('/testingg/finish')
+        this.valueStore.testFinish = 'Тест не пройден'
+      }
+    }
   }
 }
 </script>

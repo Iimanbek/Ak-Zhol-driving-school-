@@ -2,7 +2,22 @@
     <div class="main_wrapper">
         <div class="result_wrapper">
             <h1 :style="{'color': colorofH }">{{ valueStore.testFinish }}</h1>
-            <h3>Вы набрали {{ valueStore.ANSWERS }} </h3>
+            <h2 class="hhh">Вы набрали: {{ valueStore.ANSWERS }} </h2>
+            <div class="btn_wrapp">
+                <router-link to="/">
+                    <v-btn 
+                    variant="flat"
+                    color="#408448"
+                    class="bttbtn"
+                    >Выйти на главную</v-btn>
+                </router-link>
+                    <v-btn 
+                    class="bttbtn"
+                    @click="BeginTest"
+                    variant="flat"
+                    color="#408448"
+                    >Начать с начала</v-btn>
+            </div>
         </div>
     </div>
 </template>
@@ -16,7 +31,11 @@ export default {
         }
     },
     methods: {
-        
+        BeginTest(){
+            this.$router.push('/testing/1')
+            this.valueStore.ANSWERS = 0
+            this.valueStore.NOANSWERS = 0
+        }  
     },
     updated() {
         // this.returnnn()
@@ -72,5 +91,19 @@ export default {
     display: flex;
     justify-content: center;
     align-items: center;
+}
+a{
+    text-decoration: none;
+}
+.bttbtn{
+    color: white;
+}
+.btn_wrapp{
+    display: flex;
+    justify-content: space-around;
+    margin-top: 20px;
+}
+.hhh{
+    text-align: center;
 }
 </style>
