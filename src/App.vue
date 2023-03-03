@@ -11,8 +11,8 @@
 </script>
 
 <template>
-    <v-custom/>
     <RouterView />
+    <v-custom/>
 </template>
 
 <style>

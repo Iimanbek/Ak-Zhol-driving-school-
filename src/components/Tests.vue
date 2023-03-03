@@ -33,7 +33,7 @@
             </v-radio-group>
         </div>
         <div v-if="descriptions">
-          <div class="description">
+          <div class="description" :style="{'background': bgbgbg}">
             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Architecto sed inventore cum consequatur ab dignissimos ratione commodi explicabo quasi! Libero voluptatibus cum pariatur illum officia.</p>
           </div>
         </div>
@@ -66,6 +66,7 @@
       'v-timer':Timer
     },
     data: () => ({
+      bgbgbg:'',
       options_dis: false ,
       wrongANSwer: 'black' ,
       buttonActive: true,
@@ -96,18 +97,19 @@
             this.valueStore.ANSWERS += 1
             // this.$router.replace({ path: `/testing/${+idd + 1}`});
             this.wrongANSwer = 'green'
+            this.bgbgbg = 'rgba(164, 194, 180, 1)'
             this.options_dis = true
             this.buttonActive = false
             this.descriptions = true
-            
           }else{
             this.valueStore.NOANSWERS += 1
             console.log(this.valueStore.NOANSWERS );  
             this.descriptions = true
+            this.bgbgbg = 'rgba(255, 99, 71, 0.6)'
             this.buttonActive = false
             this.options_dis = true
             this.wrongANSwer = 'red'
-            
+
             if (this.valueStore.NOANSWERS === 3){
               this.$router.replace({ path: '/testingg/finish'})
               this.valueStore.testFinish = 'Тест не пройден'
@@ -185,7 +187,6 @@
   }
   .description{
     padding: 10px;
-    background: rgba(164, 194, 180, 1);
     border-radius: 5px ;
     margin-bottom: 10px;
     color: rgba(0, 0, 0, 1);
