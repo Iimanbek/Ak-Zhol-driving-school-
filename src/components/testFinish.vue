@@ -22,8 +22,8 @@ export default {
         // this.returnnn()
     },
     mounted() {
-        if (this.valueStore.testFinish.length === 3) {
-            this.colorofH = 'red' 
+        if (this.valueStore.testFinish === "Тест не пройден") {
+            this.colorofH = 'red'
         }else{
             this.colorofH = 'rgba(48, 99, 88, 1)'
         }
