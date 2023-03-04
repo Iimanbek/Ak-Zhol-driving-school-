@@ -204,7 +204,7 @@
           ]
         }
       ],
-      "answers": [
+    "answers": [
         {
           "id": 1,
           "answer": ":focus"
@@ -249,5 +249,32 @@
           "id": 11,
           "answer": "Сascading stylesheet Style"
         }
-      ]
+      ],
+    "swiper-video": [
+    {
+      "id": 1,
+      "title": "Проезд перекрестков",
+      "address": "https://i.ytimg.com/vi/d3hZEYW_5IU/hq720.jpg?sqp=-oaymwEcCOgCEMoBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLAn80pyLFYUPBli9pdJkRRkyXHkHw"
+    },
+    {
+      "id": 2,
+      "title": "Движение по автомагистралям",
+      "address": "https://i.ytimg.com/vi/gflneLLyIEY/hq720.jpg?sqp=-oaymwEcCOgCEMoBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLBQGVsNL2zI5eACkJ8p9MNNu9Q2eg"
+    },
+    {
+      "id": 3,
+      "title": "Маневрирование",
+      "address": "https://i.ytimg.com/vi/hN4YDRlD-jc/hqdefault.jpg?sqp=-oaymwEcCOADEI4CSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLBnJcuqFRAfELkk510fYtp5KCp77g"
+    },
+    {
+      "id": 4,
+      "title": "Правила обгона",
+      "address": "https://toyota-faq.ru/wp-content/uploads/6/4/6/646c301d294c05f90e013105cd9deae5.jpeg"
+    },
+    {
+      "id": 5,
+      "title": "Обязанности и права пешеходов",
+      "address": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSi3IUVlBXMkKn27AxjtkGwBEtRpqCBxUevr7QZRho92dBjCiPJ"
+    }
+  ]
 }
