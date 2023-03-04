@@ -46,6 +46,8 @@ export default {
     },
     mounted() {
         this.navScrol()
+        let box = document.querySelector('.boxtop')
+       console.log( box.getBoundingClientRect().top);
     }
 
 }
@@ -78,8 +80,7 @@ export default {
 }
 
 header {
-    position: relative;
-    z-index: 2;
+    z-index: 20;
     padding: 0 104px;
     position: fixed;
     width: 100%;
@@ -131,3 +132,4 @@ header {
     text-decoration: none;
 }
 </style>
+
