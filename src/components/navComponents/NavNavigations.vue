@@ -70,6 +70,7 @@ export default {
         transition-duration: 400ms;
         text-decoration: none;
         margin: 0px 10px;
+        cursor: pointer;
 
         &:hover {
             color: #408448;
