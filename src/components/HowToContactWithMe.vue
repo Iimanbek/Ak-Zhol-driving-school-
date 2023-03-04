@@ -14,6 +14,20 @@
     </div>
 </template>
 
+<script>
+import { mapStores } from 'pinia'
+import { useAnchorStore } from '@/store/anchor'
+export default {
+    computed: {
+        ...mapStores(useAnchorStore)
+    },
+    mounted() {
+        let contacts = document.querySelector('.contactConteiner')
+        this.anchorStore.contact = contacts.getBoundingClientRect().top
+    }
+}
+</script>
+
 <style lang="scss" scoped>
 * {
     padding: 0;
@@ -68,7 +82,7 @@
             padding: 20px;
             width: 190px;
             height: 60px;
-            font-family: 'Raleway',sans-serif;
+            font-family: 'Raleway', sans-serif;
             font-style: normal;
             font-weight: 700;
             font-size: 18px;

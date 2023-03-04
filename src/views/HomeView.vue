@@ -8,6 +8,7 @@ import onLst from "../components/onLst.vue";
 import BackFigura from "../components/MainPageComponents/BackFigura.vue";
 import InformationTest from '../components/InformationTest.vue';
 import HowToContactWithMe from '../components/HowToContactWithMe.vue';
+import { useAnchorStore } from '@/store/anchor'
 export default {
   components: {
     Slider,
@@ -19,23 +20,29 @@ export default {
     HowToContactWithMe
   },
   computed: {
-        ...mapStores(useOpenCloseStore)
-    },
+    ...mapStores(useOpenCloseStore, useAnchorStore)
+  },
+  mounted() {
+    let slidera = document.querySelector('.d')
+    this.anchorStore.reviews = slidera.getBoundingClientRect().top
+  }
 
 }; 
 </script>
 
 <template>
-    <div class="back_color" :class="{activScrolnon: this.openCloseStore.status}">
+  <div class="back_color" :class="{ activScrolnon: this.openCloseStore.status }">
     <Layout>
       <div class="main">
         <div class="container">
           <BackFigura />
           <MainPage />
           <AboutMe />
-          <Slider />
-          <InformationTest/>
-          <HowToContactWithMe/>
+          <div class="d">
+            <Slider />
+          </div>
+          <InformationTest />
+          <HowToContactWithMe />
         </div>
       </div>
     </Layout>
