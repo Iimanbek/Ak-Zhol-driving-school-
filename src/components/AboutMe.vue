@@ -21,8 +21,7 @@
                     <p>водительский стаж</p>
                 </div>
                 <div class="betwenImg">
-                    <img
-                        src="@/assets/images/honda.png">
+                    <img src="@/assets/images/honda.png">
                 </div>
 
             </div>
@@ -52,8 +51,25 @@
             </div>
         </div>
 
-</div>
+    </div>
 </template>
+
+<script>
+import { mapStores } from 'pinia'
+import { useAnchorStore } from '@/store/anchor'
+export default {
+    computed: {
+        ...mapStores(useAnchorStore)
+    },
+    mounted() {
+        let cont = document.querySelector('.abouttmeWrapper')
+   
+            this.anchorStore.cordinatAboutMe = cont.getBoundingClientRect().top
+
+
+    }
+}
+</script >
 
 <style lang="scss" scoped>
 * {
@@ -143,7 +159,7 @@ p {
     align-items: center;
     justify-content: space-between;
     position: relative;
-    
+
 
     .betweenContent {
         width: 90%;
@@ -153,10 +169,10 @@ p {
     .betwenImg {
         width: 100%;
         height: 50%;
-        position:relative;
-      
-        
-        img{
+        position: relative;
+
+
+        img {
             width: 70%;
             height: 100%;
             position: absolute;
@@ -187,7 +203,7 @@ p {
         width: 50%;
         display: flex;
         justify-content: flex-start;
-      
+
     }
 }
 
@@ -195,41 +211,45 @@ p {
     position: relative;
 }
 
-@media (max-width: 546px)  {
-    .abouttmeWrapper{
+@media (max-width: 546px) {
+    .abouttmeWrapper {
         height: 90vh;
     }
+
     .wraperBlok {
         display: grid;
         grid-template-columns: 1fr 1fr;
         grid-template-rows: 1fr 1fr;
-     
+
     }
 
-    .blok_2{
+    .blok_2 {
         height: 100%;
     }
-    .blok_3{
-        grid-column:2/2;
-        grid-row:2/2;
+
+    .blok_3 {
+        grid-column: 2/2;
+        grid-row: 2/2;
         height: 100%;
     }
-    .blok{
+
+    .blok {
         display: flex;
     }
 }
+
 @media (max-width: 390px) {
-    
-    .abouttmeWrapper{
+
+    .abouttmeWrapper {
         height: 140vh;
     }
-    .wraperBlok{
-      display: flex;
-      flex-direction: column;
-      width: 100%;
+
+    .wraperBlok {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
     }
 }
-
 </style>
 
      

@@ -46,6 +46,8 @@ export default {
     },
     mounted() {
         this.navScrol()
+        let box = document.querySelector('.boxtop')
+       console.log( box.getBoundingClientRect().top);
     }
 
 }
@@ -131,3 +133,4 @@ header {
     text-decoration: none;
 }
 </style>
+
