@@ -33,8 +33,11 @@
             </v-radio-group>
         </div>
         <div v-if="descriptions">
-          <div class="description" :style="{'background': bgbgbg}">
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Architecto sed inventore cum consequatur ab dignissimos ratione commodi explicabo quasi! Libero voluptatibus cum pariatur illum officia.</p>
+          <div v-if="qst.des" class="description" :style="{'background': bgbgbg}">
+            <p>{{ qst?.des }}</p>
+          </div>
+          <div v-else class="description" :style="{'background': bgbgbg}">
+            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Porro, quia?</p>
           </div>
         </div>
         <div class="nextBtn_wrapper">
@@ -178,6 +181,12 @@
     margin-top: 10px ;
     .v-radio{
       color: black;
+      border: 0.5px dotted black;
+      border-radius: 5px;
+      &:hover{
+        background: rgb(205, 228, 216); 
+        border-radius: 5px;
+      }
     }
   }
   .nextBtn_wrapper{
