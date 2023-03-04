@@ -11,7 +11,7 @@
                         <p>студентов <br> подготовил <br> индивидуально к практическому вождению</p>
                     </div>
                     <div class="imgConeiner">
-                        <img src="../imagesAboutme/lsd5bncnvkaa6qq0qtp4l8w2sezwshtk 1.png">
+                        <img src="@/assets/images/carGerl.png">
                     </div>
                 </div>
             </div>
@@ -21,8 +21,7 @@
                     <p>водительский стаж</p>
                 </div>
                 <div class="betwenImg">
-                    <img
-                        src="../imagesAboutme/png-transparent-2016-hyundai-accent-se-used-car-2017-hyundai-accent-se-hyundai-compact-car-sedan-car 1.png">
+                    <img src="@/assets/images/honda.png">
                 </div>
 
             </div>
@@ -34,7 +33,7 @@
                 </div>
                 <div class="book">
                     <div class="imgbetween">
-                        <img src="../imagesAboutme/1644447543_18-phonoteka-org-p-fon-uchebniki-51 2.png">
+                        <img src="@/assets/images/book.png">
                     </div>
                 </div>
 
@@ -46,14 +45,31 @@
                         <p>студентов <br> было выпущено в автошколе</p>
                     </div>
                     <div class="imgConeiner">
-                        <img src="../imagesAboutme/a7c63e6182e05103b9ededcf4a3fe8ad 1.png">
+                        <img src="@/assets/images/carMark.png">
                     </div>
                 </div>
             </div>
         </div>
 
-</div>
+    </div>
 </template>
+
+<script>
+import { mapStores } from 'pinia'
+import { useAnchorStore } from '@/store/anchor'
+export default {
+    computed: {
+        ...mapStores(useAnchorStore)
+    },
+    mounted() {
+        let cont = document.querySelector('.abouttmeWrapper')
+   
+            this.anchorStore.cordinatAboutMe = cont.getBoundingClientRect().top
+
+
+    }
+}
+</script >
 
 <style lang="scss" scoped>
 * {
@@ -143,7 +159,7 @@ p {
     align-items: center;
     justify-content: space-between;
     position: relative;
-    
+
 
     .betweenContent {
         width: 90%;
@@ -153,10 +169,10 @@ p {
     .betwenImg {
         width: 100%;
         height: 50%;
-        position:relative;
-      
-        
-        img{
+        position: relative;
+
+
+        img {
             width: 70%;
             height: 100%;
             position: absolute;
@@ -187,45 +203,52 @@ p {
         width: 50%;
         display: flex;
         justify-content: flex-start;
-      
+
     }
 }
 
 .abouttmeWrapper {
-    
     position: relative;
 }
 
 @media (max-width: 546px) {
+    .abouttmeWrapper {
+        height: 90vh;
+    }
+
     .wraperBlok {
         display: grid;
         grid-template-columns: 1fr 1fr;
         grid-template-rows: 1fr 1fr;
-     
+
     }
-    .blok_2{
+
+    .blok_2 {
         height: 100%;
     }
-    .blok_3{
-        grid-column:2/2;
-        grid-row:2/2;
+
+    .blok_3 {
+        grid-column: 2/2;
+        grid-row: 2/2;
         height: 100%;
     }
-    .blok{
+
+    .blok {
         display: flex;
     }
 }
+
 @media (max-width: 390px) {
-    .wraperBlok{
-      display: flex;
-      flex-direction: column;
-      width: 100%;
+
+    .abouttmeWrapper {
+        height: 140vh;
     }
-  .blok_2 {
-  img{
-    display: none;
-  } 
-  }
+
+    .wraperBlok {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+    }
 }
 </style>
 

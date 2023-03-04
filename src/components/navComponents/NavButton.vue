@@ -35,12 +35,14 @@ button {
         transition: box-shadow 0.5s, transform 0.5s;
         font-weight: bold;
         background-color: #ffffff00;
+        
 
     }
-    &:active{
-        background-color: #00000028;
-        transform: scale(1);
-        box-shadow: none;
+
+    &:active {
+       box-shadow: none;
+        transform: scale(.8000);
+     
     }
 }
 </style>

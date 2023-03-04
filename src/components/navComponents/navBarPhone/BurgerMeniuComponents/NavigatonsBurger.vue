@@ -37,6 +37,11 @@
             font-weight: 900;
             background-color: rgba(48, 99, 88, 0.966);
         }
+        &:active{
+            background-color: rgba(48, 99, 88, 0.966);
+            opacity: 0.5;
+
+        }
     }
 
 }
