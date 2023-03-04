@@ -3,7 +3,7 @@
         <nav-bar/>
         <main>
             <slot/>
-        </main>    
+        </main>
         <v-footer/>    
     </div>
 </template>
