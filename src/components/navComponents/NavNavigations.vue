@@ -1,7 +1,7 @@
 
 <template>
     <nav class="navLinks">
-        <a class="aboutMe"  @click="aboutMe">Обо мне</a>
+        <a @click="aboutMe">Обо мне</a>
         <a @click="">Методичка</a>
         <a @click="">Видеоуроки</a>
         <a @click="Slider">Отзывы</a>
@@ -17,17 +17,18 @@ export default {
     computed: {
         ...mapStores(useAnchorStore)
     },
-    data () {
+    data() {
         return {
             aboutMeMark: false,
             SliderMark: false,
-            contactwithmeMark : false
+            contactwithmeMark: false,
+            data: null
 
         }
     },
     methods: {
         aboutMe() {
-            this.aboutMeMark =true
+            this.aboutMeMark = true
             scroll(0, this.anchorStore.cordinatAboutMe)
         },
         Slider() {
@@ -35,12 +36,21 @@ export default {
             scroll(0, this.anchorStore.reviews)
         },
         contactwithme() {
-            this.contactwithmeMark =true
+            this.contactwithmeMark = true
             scroll(0, this.anchorStore.contact)
         },
 
+        async fetcNav() {
+            const URL = 'http://localhost:3000/kg'
+            const response = await fetch(URL)
+            this.data = response.json()
+        }
+
 
     },
+    mounted() {
+        this.fetcNav()
+    }
 
 
 }
@@ -51,14 +61,6 @@ export default {
     width: 500px;
     display: flex;
 
-
-    .aboutMe {
-        font-size: 18px;
-
-        color: #ffffff;
-        font-weight: 400;
-
-    }
 
     a {
         font-family: 'Raleway', sans-serif;

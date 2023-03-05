@@ -5,11 +5,10 @@
                 <h3>Информация о тесте</h3>
             </div>
             <div class="infParagraf">
-                <p>Какой нибудь текст про тест</p>
-                <p>Какой нибудь текст про тест</p>
+                <p>При движении ночью во время сильной метели наилучшую видимость дороги обеспечивает включение ... </p>
             </div>
-            <div class="infButton">
-                <NavBuuton>Пройти тестирование</NavBuuton>
+            <div class="infButton" @click="this.$router.push('/testing/1')">
+                <NavBuuton >Пройти тестирование</NavBuuton>
             </div>
         </div>
         <div class="rightConteiner">
@@ -24,12 +23,21 @@ import NavBuuton from '@/components/navComponents/NavButton.vue'
 export default {
     components: {
         NavBuuton
+    },
+    methods: {
+       
     }
 }
+
 
 </script>
 
 <style lang="scss" scoped>
+.infParagraf{
+    width: 80%;
+
+}
+
 * {
     box-sizing: border-box;
     padding: 0;

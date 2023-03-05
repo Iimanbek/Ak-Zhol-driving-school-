@@ -42,9 +42,7 @@ export default {
     height: 497px;
     background: url('../assets/images/contact.jpg');
     margin-top: 100px;
-    background-repeat: no-repeat;
     background-size: cover;
-    background-attachment: fixed;
     border-radius: 12px;
     padding: 70px 60px 100px 60px;
 
