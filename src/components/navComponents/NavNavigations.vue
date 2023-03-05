@@ -13,6 +13,8 @@
 import { mapStores } from 'pinia'
 import { useAnchorStore } from '@/store/anchor'
 import Slider from '../Slider.vue';
+import { url } from 'inspector';
+import { data } from 'dom7';
 export default {
     computed: {
         ...mapStores(useAnchorStore)
@@ -21,7 +23,8 @@ export default {
         return {
             aboutMeMark: false,
             SliderMark: false,
-            contactwithmeMark: false
+            contactwithmeMark: false,
+            data: null
 
         }
     },
@@ -39,8 +42,17 @@ export default {
             scroll(0, this.anchorStore.contact)
         },
 
+        async fetcNav() {
+            const URL = 'http://localhost:3000/kg'
+            const response = await fetch(URL)
+            this.data = response.json()
+        }
+
 
     },
+    mounted() {
+        this.fetcNav()
+    }
 
 
 }
