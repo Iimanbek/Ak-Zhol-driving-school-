@@ -5,6 +5,7 @@ import Slider from "../components/Slider.vue";
 import MainPage from '../components/MainPage.vue';
 import AboutMe from "../components/AboutMe.vue";
 import onLst from "../components/onLst.vue";
+import Videos from "@/components/Videos/Videos.vue";
 import BackFigura from "../components/MainPageComponents/BackFigura.vue";
 import InformationTest from '../components/InformationTest.vue';
 import HowToContactWithMe from '../components/HowToContactWithMe.vue';
@@ -17,7 +18,8 @@ export default {
     onLst,
     BackFigura,
     InformationTest,
-    HowToContactWithMe
+    HowToContactWithMe,
+    Videos
   },
   computed: {
     ...mapStores(useOpenCloseStore, useAnchorStore)
@@ -38,6 +40,7 @@ export default {
           <BackFigura />
           <MainPage />
           <AboutMe />
+          <Videos/>
           <div class="d">
             <Slider />
           </div>

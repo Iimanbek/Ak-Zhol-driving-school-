@@ -37,6 +37,8 @@ export default {
 }
 
 .inf_testWrapper {
+  position: relative;
+  z-index: 2;
     margin-top: 100px;
     width: 100%;
     display: flex;

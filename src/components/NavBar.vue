@@ -80,8 +80,7 @@ export default {
 }
 
 header {
-    position: relative;
-    z-index: 2;
+    z-index: 20;
     padding: 0 104px;
     position: fixed;
     width: 100%;

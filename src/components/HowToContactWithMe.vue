@@ -37,6 +37,8 @@ export default {
 }
 
 .contactWraper {
+  position: relative;
+  z-index: 2;
     height: 497px;
     background: url('../assets/images/contact.jpg');
     margin-top: 100px;

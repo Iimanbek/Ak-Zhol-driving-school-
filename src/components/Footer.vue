@@ -13,6 +13,8 @@ export default {
 </script>
 <style lang="scss">
 footer{
+    position: relative;
+    z-index: 2;
     background: rgb(250, 249, 249);
 }
 </style>
