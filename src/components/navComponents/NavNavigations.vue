@@ -13,8 +13,6 @@
 import { mapStores } from 'pinia'
 import { useAnchorStore } from '@/store/anchor'
 import Slider from '../Slider.vue';
-import { url } from 'inspector';
-import { data } from 'dom7';
 export default {
     computed: {
         ...mapStores(useAnchorStore)
