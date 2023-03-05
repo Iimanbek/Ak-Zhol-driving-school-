@@ -1,0 +1,29 @@
+@import url('https://fonts.googleapis.com/css2?family=Comfortaa:wght@700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Raleway&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@600&display=swap');
+
+
+.container {
+    max-width: 1140px;
+    margin: 0 auto;
+    position: relative;
+}
+.back_color{
+    width: 100%;
+    background: rgb(176,211,197);
+    background: linear-gradient(180deg, rgba(176,211,197,1) 0%, rgba(176,211,197,1) 75%, rgba(64,64,64,1) 100%);
+
+}
+.activScrolnon{
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+}
+
+body{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    cursor: none;
+}
+
