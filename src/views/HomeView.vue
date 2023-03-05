@@ -9,11 +9,13 @@ import BackFigura from "../components/MainPageComponents/BackFigura.vue";
 import InformationTest from '../components/InformationTest.vue';
 import HowToContactWithMe from '../components/HowToContactWithMe.vue';
 import { useAnchorStore } from '@/store/anchor'
+import met from '../components/met.vue';
 export default {
   components: {
     Slider,
     MainPage,
     AboutMe,
+    met,
     onLst,
     BackFigura,
     InformationTest,
@@ -38,6 +40,7 @@ export default {
           <BackFigura />
           <MainPage />
           <AboutMe />
+          <met/>
           <div class="d">
             <Slider />
           </div>
