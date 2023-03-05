@@ -41,6 +41,12 @@
           </div>
         </div>
         <div class="nextBtn_wrapper">
+          <v-btn
+          class="nextBtn"
+          variant="flat"
+          color="#408448"
+          @click="this.$router.push('/')"
+          >Выйти на главную</v-btn>
           <v-btn 
           v-if="buttonActive"
           class="nextBtn"
@@ -176,6 +182,7 @@
   .nextBtn{
     color: white;
     font-weight: 500;
+    margin-left: 20px ;
   }
   .rssdio-group{
     margin-top: 10px ;
