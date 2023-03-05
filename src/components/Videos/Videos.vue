@@ -90,7 +90,7 @@ export default {
   width: 100vw;
   height: calc(800px * 2.5);
   top: 250px;
-  left: -10px;
+  left: -50px;
 }
 .top{
   display: flex;

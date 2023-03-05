@@ -31,6 +31,8 @@ export default {
 
 <style lang="scss">
 .metWraper {
+  position: relative;
+  z-index: 2;
     display: flex;
     margin-top: 100px;
     justify-content: space-between;

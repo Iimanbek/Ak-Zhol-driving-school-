@@ -1,4 +1,4 @@
-<template lang="">
+<template>
     <footer>
         <v-under/>
     </footer>
@@ -15,6 +15,5 @@ export default {
 footer{
     position: relative;
     z-index: 2;
-    background: rgb(250, 249, 249);
 }
 </style>

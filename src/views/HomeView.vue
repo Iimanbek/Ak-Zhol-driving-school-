@@ -42,8 +42,8 @@ export default {
           <BackFigura />
           <MainPage />
           <AboutMe />
-          <Videos/>
           <met/>
+          <Videos/>
           <div class="d">
             <Slider />
           </div>

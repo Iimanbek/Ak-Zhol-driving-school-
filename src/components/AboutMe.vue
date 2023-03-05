@@ -209,6 +209,7 @@ p {
 
 .abouttmeWrapper {
     position: relative;
+  z-index: 2;
 }
 
 @media (max-width: 546px) {
