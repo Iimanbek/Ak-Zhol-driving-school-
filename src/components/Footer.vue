@@ -15,5 +15,6 @@ export default {
 footer{
     position: relative;
     z-index: 2;
+    background: rgba(176, 211, 197,0.9);
 }
 </style>
